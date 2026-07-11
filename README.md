@@ -33,6 +33,7 @@ git status                  # see what changed
 git add .
 git commit -m "docs: add new documents"
 git push
+git push -u origin main --force
 ```
 
 ### Full "added new documents" flow, start to finish

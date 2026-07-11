@@ -20,13 +20,13 @@ export function mountTopControls() {
   const homeBtn = createElement(
     "button",
     {
-      className: "top-control-btn",
+      className: "top-control-btn top-control-btn-home",
       title: "Home",
       onClick: () => {
         window.location.hash = "#/dashboard";
       },
     },
-    ["🏠"],
+    ["🏠 ", createElement("span", {}, ["Home"])],
   );
 
   // Theme toggle
