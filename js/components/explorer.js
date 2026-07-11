@@ -420,9 +420,17 @@ export class ExplorerComponent {
       const badgeRow = createElement(
         "div",
         { className: "format-badges" },
-        (doc.variants || []).map((variant) =>
-          createElement("span", { className: "format-badge" }, [variant.label]),
-        ),
+        (doc.variants || []).map((variant) => {
+          const badgeType = this.getTypeClass(variant.fileType).replace(
+            "type-",
+            "format-badge-",
+          );
+          return createElement(
+            "span",
+            { className: `format-badge ${badgeType}` },
+            [variant.label],
+          );
+        }),
       );
 
       const iconEl = createElement(

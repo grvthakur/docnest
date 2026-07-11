@@ -19,9 +19,9 @@ export class App {
 
   async init() {
     console.log("[DocNest] init() starting");
-    import("./components/versionInfo.js")
-      .then((mod) => mod.mountVersionInfo())
-      .catch((e) => console.error("[DocNest] version info failed to load:", e));
+    import("./components/topControls.js")
+      .then((mod) => mod.mountTopControls())
+      .catch((e) => console.error("[DocNest] top controls failed to load:", e));
 
     const config = await loadConfig();
     // loadDocuments now reads config.persons[*].documentsFile and merges

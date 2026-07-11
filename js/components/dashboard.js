@@ -46,12 +46,21 @@ export class DashboardComponent {
           createElement(
             "div",
             {
-              className: "avatar",
-              style: `background:${color}22;color:${color};`,
+              className: "avatar-ring",
+              style: `background:linear-gradient(135deg, ${color}, ${color}33);`,
             },
-            [person.name.charAt(0)],
+            [
+              createElement(
+                "div",
+                {
+                  className: "avatar",
+                  style: `background:${color}22;color:${color};`,
+                },
+                [person.name.charAt(0)],
+              ),
+            ],
           ),
-          createElement("div", { style: "font-weight:500;" }, [person.name]),
+          createElement("div", { className: "person-name" }, [person.name]),
           createElement("div", { className: "person-doc-count" }, [
             `${stats.count} doc${stats.count === 1 ? "" : "s"}`,
           ]),
