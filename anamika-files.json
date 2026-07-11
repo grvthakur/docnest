@@ -1,0 +1,973 @@
+[
+  {
+    "id": "1-anamika",
+    "name": "Acknowledgement Slip S1329903765000",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/acknowledgementSlip_S1329903765000.pdf"
+      }
+    ]
+  },
+  {
+    "id": "2-anamika",
+    "name": "Acknowledgment Berojgaari Bhatta",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/ACKNOWLEDGMENT BEROJGAARI BHATTA.pdf"
+      }
+    ]
+  },
+  {
+    "id": "3-anamika",
+    "name": "Apaar ID",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/apaar ID.pdf"
+      }
+    ]
+  },
+  {
+    "id": "4-anamika",
+    "name": "Caste Certificate",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/PERSONAL/CASTE_CERTIFICATE.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/CASTE_CERTIFICATE.pdf"
+      }
+    ]
+  },
+  {
+    "id": "5-anamika",
+    "name": "Eaadhaar 2906469800525020240414101818 05042025174318",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/EAadhaar_2906469800525020240414101818_05042025174318.pdf"
+      }
+    ]
+  },
+  {
+    "id": "6-anamika",
+    "name": "Ews Certificate",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/PERSONAL/EWS_CERTIFICATE.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/EWS_CERTIFICATE.pdf"
+      }
+    ]
+  },
+  {
+    "id": "7-anamika",
+    "name": "Gramin Bank Pass Book",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/PERSONAL/Gramin Bank PassBook.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/Gramin Bank PassBook.pdf"
+      }
+    ]
+  },
+  {
+    "id": "8-anamika",
+    "name": "Income Certificate 2023",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/PERSONAL/INCOME_CERTIFICATE_2023.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/INCOME_CERTIFICATE_2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "9-anamika",
+    "name": "Pancard",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/PANCARD.pdf"
+      }
+    ]
+  },
+  {
+    "id": "10-anamika",
+    "name": "Pancard Back",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Back",
+        "fileType": "jpg",
+        "filePath": "files/anamika/PERSONAL/PANCARD_BACK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "11-anamika",
+    "name": "Pancard Front",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Front",
+        "fileType": "jpg",
+        "filePath": "files/anamika/PERSONAL/PANCARD_FRONT.jpg"
+      }
+    ]
+  },
+  {
+    "id": "12-anamika",
+    "name": "Passbook",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/PERSONAL/PASSBOOK.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/PASSBOOK.pdf"
+      }
+    ]
+  },
+  {
+    "id": "13-anamika",
+    "name": "Rashan Card",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/PERSONAL/RASHAN CARD.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/RASHAN CARD.pdf"
+      }
+    ]
+  },
+  {
+    "id": "14-anamika",
+    "name": "Residence Certificate",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/PERSONAL/RESIDENCE_CERTIFICATE.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/RESIDENCE_CERTIFICATE.pdf"
+      }
+    ]
+  },
+  {
+    "id": "15-anamika",
+    "name": "Your 811 Account Details",
+    "person": "anamika",
+    "category": "Personal",
+    "folderPath": "anamika/Personal",
+    "tags": [
+      "personal"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/PERSONAL/Your 811 account details.pdf"
+      }
+    ]
+  },
+  {
+    "id": "16-anamika",
+    "name": "Eng Sign 25kb",
+    "person": "anamika",
+    "category": "Photo And Sign",
+    "folderPath": "anamika/Photo And Sign",
+    "tags": [
+      "photo and sign"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpeg",
+        "filePath": "files/anamika/PHOTO AND SIGN/ENG_SIGN_25KB.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "17-anamika",
+    "name": "Eng Sign 90kb",
+    "person": "anamika",
+    "category": "Photo And Sign",
+    "folderPath": "anamika/Photo And Sign",
+    "tags": [
+      "photo and sign"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpeg",
+        "filePath": "files/anamika/PHOTO AND SIGN/ENG_SIGN_90KB.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "18-anamika",
+    "name": "Hindi Sign 90kb",
+    "person": "anamika",
+    "category": "Photo And Sign",
+    "folderPath": "anamika/Photo And Sign",
+    "tags": [
+      "photo and sign"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpeg",
+        "filePath": "files/anamika/PHOTO AND SIGN/HINDI_SIGN_90KB.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "19-anamika",
+    "name": "Passport",
+    "person": "anamika",
+    "category": "Photo And Sign",
+    "folderPath": "anamika/Photo And Sign",
+    "tags": [
+      "photo and sign"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "png",
+        "filePath": "files/anamika/PHOTO AND SIGN/PASSPORT.png"
+      }
+    ]
+  },
+  {
+    "id": "20-anamika",
+    "name": "Passport Photo 102kb",
+    "person": "anamika",
+    "category": "Photo And Sign",
+    "folderPath": "anamika/Photo And Sign",
+    "tags": [
+      "photo and sign"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpeg",
+        "filePath": "files/anamika/PHOTO AND SIGN/PASSPORT_PHOTO_102KB.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "21-anamika",
+    "name": "Passport Photo 25kb",
+    "person": "anamika",
+    "category": "Photo And Sign",
+    "folderPath": "anamika/Photo And Sign",
+    "tags": [
+      "photo and sign"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpeg",
+        "filePath": "files/anamika/PHOTO AND SIGN/PASSPORT_PHOTO_25KB.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "22-anamika",
+    "name": "Marksheet Final",
+    "person": "anamika",
+    "category": "Bed",
+    "folderPath": "anamika/Study/Bed",
+    "tags": [
+      "bed"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/BED/Marksheet Final.pdf"
+      }
+    ]
+  },
+  {
+    "id": "23-anamika",
+    "name": "Marksheet First Year",
+    "person": "anamika",
+    "category": "Bed",
+    "folderPath": "anamika/Study/Bed",
+    "tags": [
+      "bed"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/BED/Marksheet first year.pdf"
+      }
+    ]
+  },
+  {
+    "id": "24-anamika",
+    "name": "Ignou Examination Form Acknowledgement",
+    "person": "anamika",
+    "category": "Ignou",
+    "folderPath": "anamika/Study/Ignou",
+    "tags": [
+      "ignou"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_ Examination Form Acknowledgement.pdf"
+      }
+    ]
+  },
+  {
+    "id": "25-anamika",
+    "name": "Ignou Acknowledgement Slip",
+    "person": "anamika",
+    "category": "Ignou",
+    "folderPath": "anamika/Study/Ignou",
+    "tags": [
+      "ignou"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_ACKNOWLEDGEMENT_SLIP.jpg"
+      }
+    ]
+  },
+  {
+    "id": "26-anamika",
+    "name": "Ignou Application Form",
+    "person": "anamika",
+    "category": "Ignou",
+    "folderPath": "anamika/Study/Ignou",
+    "tags": [
+      "ignou"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_APPLICATION_FORM.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_APPLICATION_FORM1.jpg"
+      }
+    ]
+  },
+  {
+    "id": "27-anamika",
+    "name": "Ignou Application Form2",
+    "person": "anamika",
+    "category": "Ignou",
+    "folderPath": "anamika/Study/Ignou",
+    "tags": [
+      "ignou"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_APPLICATION_FORM2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "28-anamika",
+    "name": "Ignou ID Card",
+    "person": "anamika",
+    "category": "Ignou",
+    "folderPath": "anamika/Study/Ignou",
+    "tags": [
+      "ignou"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_ID_CARD.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_ID_CARD.pdf"
+      }
+    ]
+  },
+  {
+    "id": "29-anamika",
+    "name": "Ignou Re Registration July2025 2401129201",
+    "person": "anamika",
+    "category": "Ignou",
+    "folderPath": "anamika/Study/Ignou",
+    "tags": [
+      "ignou"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_RE-REGISTRATION_JULY2025_2401129201.pdf"
+      }
+    ]
+  },
+  {
+    "id": "30-anamika",
+    "name": "Ignou Registration",
+    "person": "anamika",
+    "category": "Ignou",
+    "folderPath": "anamika/Study/Ignou",
+    "tags": [
+      "ignou"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_REGISTRATION.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_REGISTRATION1.jpg"
+      }
+    ]
+  },
+  {
+    "id": "31-anamika",
+    "name": "Ignou Registration2",
+    "person": "anamika",
+    "category": "Ignou",
+    "folderPath": "anamika/Study/Ignou",
+    "tags": [
+      "ignou"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IGNOU/IGNOU_REGISTRATION2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "32-anamika",
+    "name": "Meg \u2013 10",
+    "person": "anamika",
+    "category": "Assignment Final Year",
+    "folderPath": "anamika/Study/Ignou/Assignment Final Year",
+    "tags": [
+      "assignment final year"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Word",
+        "fileType": "docx",
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG \u2013 10.docx"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG \u2013 10.pdf"
+      }
+    ]
+  },
+  {
+    "id": "33-anamika",
+    "name": "Meg \u2013 15",
+    "person": "anamika",
+    "category": "Assignment Final Year",
+    "folderPath": "anamika/Study/Ignou/Assignment Final Year",
+    "tags": [
+      "assignment final year"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Word",
+        "fileType": "docx",
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG \u2013 15.docx"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG \u2013 15.pdf"
+      }
+    ]
+  },
+  {
+    "id": "34-anamika",
+    "name": "Meg 14",
+    "person": "anamika",
+    "category": "Assignment Final Year",
+    "folderPath": "anamika/Study/Ignou/Assignment Final Year",
+    "tags": [
+      "assignment final year"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Word",
+        "fileType": "docx",
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG-14.docx"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG-14.pdf"
+      }
+    ]
+  },
+  {
+    "id": "35-anamika",
+    "name": "Meg 07 Indian English Literature",
+    "person": "anamika",
+    "category": "Assignment Final Year",
+    "folderPath": "anamika/Study/Ignou/Assignment Final Year",
+    "tags": [
+      "assignment final year"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Word",
+        "fileType": "docx",
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG_07_Indian English Literature.docx"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG_07_Indian English Literature.pdf"
+      }
+    ]
+  },
+  {
+    "id": "36-anamika",
+    "name": "Graduation Marksheet",
+    "person": "anamika",
+    "category": "Graduation",
+    "folderPath": "anamika/Study/Graduation",
+    "tags": [
+      "graduation"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/GRADUATION/GRADUATION_MARKSHEET.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/GRADUATION/GRADUATION_MARKSHEET.pdf"
+      }
+    ]
+  },
+  {
+    "id": "37-anamika",
+    "name": "Graduation Registration",
+    "person": "anamika",
+    "category": "Graduation",
+    "folderPath": "anamika/Study/Graduation",
+    "tags": [
+      "graduation"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/GRADUATION/GRADUATION_REGISTRATION.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/GRADUATION/GRADUATION_REGISTRATION.pdf"
+      }
+    ]
+  },
+  {
+    "id": "38-anamika",
+    "name": "Intermediate Admit Card",
+    "person": "anamika",
+    "category": "Intermediate",
+    "folderPath": "anamika/Study/Intermediate",
+    "tags": [
+      "intermediate"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/INTERMEDIATE/INTERMEDIATE_ADMIT_CARD.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/INTERMEDIATE/INTERMEDIATE_ADMIT_CARD.pdf"
+      }
+    ]
+  },
+  {
+    "id": "39-anamika",
+    "name": "Intermediate Character Certificate",
+    "person": "anamika",
+    "category": "Intermediate",
+    "folderPath": "anamika/Study/Intermediate",
+    "tags": [
+      "intermediate"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/INTERMEDIATE/INTERMEDIATE_CHARACTER_CERTIFICATE.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/INTERMEDIATE/INTERMEDIATE_CHARACTER_CERTIFICATE.pdf"
+      }
+    ]
+  },
+  {
+    "id": "40-anamika",
+    "name": "Intermediate Passing Certificate",
+    "person": "anamika",
+    "category": "Intermediate",
+    "folderPath": "anamika/Study/Intermediate",
+    "tags": [
+      "intermediate"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/INTERMEDIATE/INTERMEDIATE_PASSING_CERTIFICATE.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/INTERMEDIATE/INTERMEDIATE_PASSING_CERTIFICATE.pdf"
+      }
+    ]
+  },
+  {
+    "id": "41-anamika",
+    "name": "Intermediate Provisional",
+    "person": "anamika",
+    "category": "Intermediate",
+    "folderPath": "anamika/Study/Intermediate",
+    "tags": [
+      "intermediate"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/INTERMEDIATE/INTERMEDIATE_PROVISIONAL.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/INTERMEDIATE/INTERMEDIATE_PROVISIONAL.pdf"
+      }
+    ]
+  },
+  {
+    "id": "42-anamika",
+    "name": "Intermediate Result",
+    "person": "anamika",
+    "category": "Intermediate",
+    "folderPath": "anamika/Study/Intermediate",
+    "tags": [
+      "intermediate"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/INTERMEDIATE/INTERMEDIATE_RESULT.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/INTERMEDIATE/INTERMEDIATE_RESULT.pdf"
+      }
+    ]
+  },
+  {
+    "id": "43-anamika",
+    "name": "Intermediate Transfer Certificate",
+    "person": "anamika",
+    "category": "Intermediate",
+    "folderPath": "anamika/Study/Intermediate",
+    "tags": [
+      "intermediate"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/INTERMEDIATE/INTERMEDIATE_TRANSFER_CERTIFICATE.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/INTERMEDIATE/INTERMEDIATE_TRANSFER_CERTIFICATE.pdf"
+      }
+    ]
+  },
+  {
+    "id": "44-anamika",
+    "name": "Matriculation Admit Card",
+    "person": "anamika",
+    "category": "Matriculation",
+    "folderPath": "anamika/Study/Matriculation",
+    "tags": [
+      "matriculation"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/MATRICULATION/MATRICULATION_ADMIT_CARD.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/MATRICULATION/MATRICULATION_ADMIT_CARD.pdf"
+      }
+    ]
+  },
+  {
+    "id": "45-anamika",
+    "name": "Matriculation Passing Certificate",
+    "person": "anamika",
+    "category": "Matriculation",
+    "folderPath": "anamika/Study/Matriculation",
+    "tags": [
+      "matriculation"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/MATRICULATION/MATRICULATION_PASSING_CERTIFICATE.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/MATRICULATION/MATRICULATION_PASSING_CERTIFICATE.pdf"
+      }
+    ]
+  },
+  {
+    "id": "46-anamika",
+    "name": "Matriculation Result",
+    "person": "anamika",
+    "category": "Matriculation",
+    "folderPath": "anamika/Study/Matriculation",
+    "tags": [
+      "matriculation"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/anamika/STUDY/IMAGE/MATRICULATION/MATRICULATION_RESULT.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/MATRICULATION/MATRICULATION_RESULT_.pdf"
+      }
+    ]
+  },
+  {
+    "id": "47-anamika",
+    "name": "Marksheet",
+    "person": "anamika",
+    "category": "Matriculation",
+    "folderPath": "anamika/Study/Matriculation",
+    "tags": [
+      "matriculation"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/anamika/STUDY/PDF/MATRICULATION/MARKSHEET.pdf"
+      }
+    ]
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "app": {
+    "name": "DocNest",
+    "theme": "light",
+    "accentColor": "#2563eb"
+  },
+  "users": [
+    {
+      "id": "admin",
+      "name": "Admin",
+      "role": "admin",
+      "pinHash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+      "permissions": [
+        "gaurav",
+        "papa",
+        "mummy",
+        "anamika"
+      ]
+    },
+    {
+      "id": "gaurav",
+      "name": "Gaurav",
+      "role": "gaurav",
+      "pinHash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+      "permissions": [
+        "gaurav"
+      ]
+    },
+    {
+      "id": "mummy",
+      "name": "Mummy",
+      "role": "mummy",
+      "pinHash": "0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c",
+      "permissions": [
+        "mummy",
+        "papa"
+      ]
+    },
+    {
+      "id": "papa",
+      "name": "Papa",
+      "role": "papa",
+      "pinHash": "0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c",
+      "permissions": [
+        "papa",
+        "mummy"
+      ]
+    },
+    {
+      "id": "anamika",
+      "name": "Anamika",
+      "role": "anamika",
+      "pinHash": "9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0",
+      "permissions": [
+        "anamika"
+      ]
+    }
+  ],
+  "persons": {
+    "mummy": {
+      "id": "mummy",
+      "name": "Mummy",
+      "type": "flat",
+      "documentsFile": "mummy-files.json"
+    },
+    "papa": {
+      "id": "papa",
+      "name": "Papa",
+      "type": "flat",
+      "documentsFile": "papa-files.json"
+    },
+    "gaurav": {
+      "id": "gaurav",
+      "name": "Gaurav",
+      "type": "nested",
+      "documentsFile": "gaurav-files.json"
+    },
+    "anamika": {
+      "id": "anamika",
+      "name": "Anamika",
+      "type": "nested",
+      "documentsFile": "anamika-files.json"
+    }
+  },
+  "features": {
+    "search": true,
+    "filters": true
+  }
+}

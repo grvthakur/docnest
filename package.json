@@ -1,0 +1,11 @@
+{
+  "name": "docnest-scan-docs",
+  "version": "1.0.0",
+  "description": "Scans DocNest files/ folders and updates person JSON files with new documents.",
+  "main": "scan-docs.js",
+  "scripts": {
+    "scan": "node scan-docs.js",
+    "scan:dry": "node scan-docs.js --dry-run --verbose"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,385 @@
+[
+  {
+    "id": "1-mummy",
+    "name": "Gas Connection - Mahinam",
+    "person": "mummy",
+    "category": "Gas Connection",
+    "folderPath": "mummy/Utility/Gas Connection",
+    "tags": [
+      "gas"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/GAS CARD MAHINAM.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/mummy/GAS CARD MAHINAM.jpg"
+      }
+    ]
+  },
+  {
+    "id": "2-mummy",
+    "name": "Gas Connection - Pradeep",
+    "person": "mummy",
+    "category": "Gas Connection",
+    "folderPath": "mummy/Utility/Gas Connection",
+    "tags": [
+      "gas"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/mummy/GAS CARD PRADEEP CHY.jpg"
+      }
+    ]
+  },
+  {
+    "id": "3-mummy",
+    "name": "Ration Card",
+    "person": "mummy",
+    "category": "Ration Card",
+    "folderPath": "mummy/Identity/Ration Card",
+    "tags": [
+      "ration"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/RASHAN CARD.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/mummy/RASHAN CARD.jpg"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Aadhaar Card",
+    "person": "mummy",
+    "category": "Aadhaar Card",
+    "folderPath": "mummy/Identity/Aadhaar Card",
+    "tags": [
+      "aadhaar"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/MUMMY AADHAR CARD.pdf"
+      },
+      {
+        "label": "Photo (Full)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY AADHAR.jpg"
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY AADHAR FRONT.jpg"
+      },
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY AADHAR BACK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Aadhaar PVC Card",
+    "person": "mummy",
+    "category": "Aadhaar Card",
+    "folderPath": "mummy/Identity/Aadhaar Card",
+    "tags": [
+      "aadhaar",
+      "pvc"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/MUMMY AADHAR PVC CARD.pdf"
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/mummy aadhar front pvc card.jpg"
+      },
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY AADHAR BACK PVC.jpg"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "PAN Card",
+    "person": "mummy",
+    "category": "PAN Card",
+    "folderPath": "mummy/Identity/PAN Card",
+    "tags": [
+      "pan"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/MUMMY PAN.pdf"
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY PAN FRONT.jpg"
+      },
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY PAN BACK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "CGHS Card",
+    "person": "mummy",
+    "category": "CGHS Card",
+    "folderPath": "mummy/Identity/CGHS Card",
+    "tags": [
+      "cghs"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/MUMMY CGHS CARD.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY CGHS CARD.jpg"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Voter ID (DBG Address)",
+    "person": "mummy",
+    "category": "Voter ID",
+    "folderPath": "mummy/Voter ID",
+    "tags": [
+      "voter"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF (Back)",
+        "fileType": "pdf",
+        "filePath": "files/mummy/MUMMY_VOTER_ID_DBG_BACK.pdf"
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY_VOTER_ID_DBG_FRONT.jpg"
+      },
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY_VOTER_ID_DBG_BACK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Voter ID (Padri Address)",
+    "person": "mummy",
+    "category": "Voter ID",
+    "folderPath": "mummy/Voter ID",
+    "tags": [
+      "voter"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/MUMMY_VOTER_ID_PADRI.pdf"
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY_VOTER_ID_PADRI_FRONT.jpg"
+      },
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY_VOTER_ID_PADRI_BACK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Voter ID Card (UVK0617712)",
+    "person": "mummy",
+    "category": "Voter ID",
+    "folderPath": "mummy/Identity/Voter ID",
+    "tags": [
+      "voter"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/VOTER_ID_CARD_UVK0617712.pdf"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Voter ID Card (UVK0617712, Padri)",
+    "person": "mummy",
+    "category": "Voter ID",
+    "folderPath": "mummy/Identity/Voter ID",
+    "tags": [
+      "voter"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/VOTER_ID_CARD_UVK0617712_PADRI.pdf"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Voter ID Application (Form 8)",
+    "person": "mummy",
+    "category": "Voter ID",
+    "folderPath": "mummy/Identity/Voter ID",
+    "tags": [
+      "voter"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/Form8_preview_voter_id_card.pdf"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "name": "ATM Card",
+    "person": "mummy",
+    "category": "Banking",
+    "folderPath": "mummy/Banking",
+    "tags": [
+      "bank",
+      "atm"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/MUMMY ATM.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY ATM.jpg"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Checkbook",
+    "person": "mummy",
+    "category": "Banking",
+    "folderPath": "mummy/Banking",
+    "tags": [
+      "bank",
+      "checkbook"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/MUMMY CHECKBOOK.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY CHECKBOOK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Gramin Bank Passbook",
+    "person": "mummy",
+    "category": "Banking",
+    "folderPath": "mummy/Banking",
+    "tags": [
+      "bank",
+      "passbook"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/MUMMY GRAMIN BANK PASSBOOK.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY GRAMIN BANK PASSBOOK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Bank Passbook",
+    "person": "mummy",
+    "category": "Banking",
+    "folderPath": "mummy/Banking",
+    "tags": [
+      "bank",
+      "passbook"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/mummy/MUMMY PASSBOOK.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY PASSBOOK.jpg"
+      }
+    ]
+  }
+]

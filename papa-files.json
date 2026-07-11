@@ -1,0 +1,501 @@
+[
+  {
+    "id": "1-papa",
+    "name": "Gas Connection - Mahinam",
+    "person": "papa",
+    "category": "Gas Connection",
+    "folderPath": "papa/Utility/Gas Connection",
+    "tags": [
+      "gas"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/GAS CARD MAHINAM.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/GAS CARD MAHINAM.jpg"
+      }
+    ]
+  },
+  {
+    "id": "2-papa",
+    "name": "Gas Connection - Pradeep",
+    "person": "papa",
+    "category": "Gas Connection",
+    "folderPath": "papa/Utility/Gas Connection",
+    "tags": [
+      "gas"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/GAS CARD PRADEEP CHY.jpg"
+      }
+    ]
+  },
+  {
+    "id": "3-papa",
+    "name": "Ration Card",
+    "person": "papa",
+    "category": "Ration Card",
+    "folderPath": "papa/Identity/Ration Card",
+    "tags": [
+      "ration"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/RASHAN CARD.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/RASHAN CARD.jpg"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Matasya Palan Certificate",
+    "person": "papa",
+    "category": "Certificates",
+    "folderPath": "papa/Certificates",
+    "tags": [
+      "certificate"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/MATASYA PALAN CERTI 2.pdf"
+      },
+      {
+        "label": "Photo (1)",
+        "fileType": "jpg",
+        "filePath": "files/papa/MATASYA PALAN CERTI 2.jpg"
+      },
+      {
+        "label": "Photo (2)",
+        "fileType": "jpg",
+        "filePath": "files/papa/MATASYA PALAN CERTIFICATE.jpg"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "name": "10th Certificate",
+    "person": "papa",
+    "category": "Certificates",
+    "folderPath": "papa/Certificates",
+    "tags": [
+      "certificate",
+      "education"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA 10TH CERTIFICATE.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA 10TH CERTIFICATE.jpg"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Acknowledgement Slip",
+    "person": "papa",
+    "category": "Acknowledgement Slip",
+    "folderPath": "papa/Certificates/Acknowledgement Slip",
+    "tags": [
+      "certificate"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPAacknowledgementSlip_S1852581044050.pdf"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Aadhaar Card",
+    "person": "papa",
+    "category": "Aadhaar Card",
+    "folderPath": "papa/Identity/Aadhaar Card",
+    "tags": [
+      "aadhaar"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA ADHAR.pdf"
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA ADHAR FRONT.jpg"
+      },
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA ADHAR BACK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "name": "PAN Card",
+    "person": "papa",
+    "category": "PAN Card",
+    "folderPath": "papa/Identity/PAN Card",
+    "tags": [
+      "pan"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA PAN.pdf"
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA PAN FRONT.jpg"
+      },
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA PAN BACK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "name": "CGHS Card",
+    "person": "papa",
+    "category": "CGHS Card",
+    "folderPath": "papa/Identity/CGHS Card",
+    "tags": [
+      "cghs"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA CGHS CARD.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA CGHS CARD.jpg"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "name": "Voter ID (DBG Address)",
+    "person": "papa",
+    "category": "Voter ID",
+    "folderPath": "papa/Identity/Voter ID",
+    "tags": [
+      "voter"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF (Back)",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA_VOTER_ID_DBG_BACK.pdf"
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA_VOTER_ID_DBG_FRONT.jpg"
+      },
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA_VOTER_ID_DBG_BACK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "name": "Voter ID (Padri Address, UVK0617704)",
+    "person": "papa",
+    "category": "Voter ID",
+    "folderPath": "papa/Identity/Voter ID",
+    "tags": [
+      "voter"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA_VOTER_IF_CARD_PADRI_UVK0617704.pdf"
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "name": "Voter ID Card (UVK0617704)",
+    "person": "papa",
+    "category": "Voter ID",
+    "folderPath": "papa/Identity/Voter ID",
+    "tags": [
+      "voter"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/VOTER_ID_CARD_UVK0617704.pdf"
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "name": "Voter ID Application (Form 79)",
+    "person": "papa",
+    "category": "Voter ID",
+    "folderPath": "papa/Identity/Voter ID",
+    "tags": [
+      "voter"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/VOTERID_CARD_Form_79_S04079O8C0301261200083_e48fe194-a00e-45f7-9d4f-3c57a55879a9_Form8S040.pdf"
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "name": "ATM Card",
+    "person": "papa",
+    "category": "Banking",
+    "folderPath": "papa/Banking",
+    "tags": [
+      "bank",
+      "atm"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA ATM.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA ATM.jpg"
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "name": "SBI Passbook",
+    "person": "papa",
+    "category": "Banking",
+    "folderPath": "papa/Banking",
+    "tags": [
+      "bank",
+      "passbook"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA PASSBOOK SBI.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA PASSBOOK SBI.jpg"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "name": "Post Office Passbook - Deposit Account",
+    "person": "papa",
+    "category": "Banking",
+    "folderPath": "papa/Banking",
+    "tags": [
+      "bank",
+      "passbook",
+      "post office"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA_POST_OFFICE_PASSBOOK_DEPOSIT_ACCOUNT.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA_POST_OFFICE_PASSBOOK_DEPOSIT_ACCOUNT.jpg"
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "name": "Post Office Passbook - Fix Deposit",
+    "person": "papa",
+    "category": "Banking",
+    "folderPath": "papa/Banking",
+    "tags": [
+      "bank",
+      "passbook",
+      "post office"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA_POST_OFFICE_PASSBOOK_FIX_DEPOSIT.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA_POST_OFFICE_PASSBOOK_FIX_DEPOSIT.jpg"
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "name": "Post Office Passbook - Saving Account",
+    "person": "papa",
+    "category": "Banking",
+    "folderPath": "papa/Banking",
+    "tags": [
+      "bank",
+      "passbook",
+      "post office"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA_POST_OFFICE_PASSBOOK_SAVING_ACCOUNT.pdf"
+      },
+      {
+        "label": "Photo (1)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA_POST_OFFICE_PASSBOOK_SAVING ACCOUNT.jpg"
+      },
+      {
+        "label": "Photo (2)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA_POST_OFFICE_PASSBOOK_SAVING_ACC.jpg"
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "name": "Driving License",
+    "person": "papa",
+    "category": "Driving License",
+    "folderPath": "papa/Vehicle/Driving License",
+    "tags": [
+      "vehicle",
+      "dl"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF (Back)",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA DL BACK.pdf"
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA DRIVING LICENSE FRONT.jpg"
+      },
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA DL BACK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "33",
+    "name": "Bike Registration Card",
+    "person": "papa",
+    "category": "Registration",
+    "folderPath": "papa/Vehicle/Registration",
+    "tags": [
+      "vehicle",
+      "bike"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA BIKE REG CARD.pdf"
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA BIKE REG FRONT.jpg"
+      },
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA BIKE REG CARD BACK.jpg"
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "name": "Passport Photo",
+    "person": "papa",
+    "category": "Photos",
+    "folderPath": "papa/Photos",
+    "tags": [
+      "photo"
+    ],
+    "lastUpdated": "2026-07-09",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA_PASSPORT_PHOTO.jpg"
+      }
+    ]
+  }
+]

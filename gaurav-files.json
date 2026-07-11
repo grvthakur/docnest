@@ -1,0 +1,3249 @@
+[
+  {
+    "id": "1-gaurav",
+    "name": "Application Number",
+    "person": "gaurav",
+    "category": "Personal Docs Misc",
+    "folderPath": "gaurav/Personal Docs Misc",
+    "tags": [
+      "personal docs misc"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Text",
+        "fileType": "txt",
+        "filePath": "files/gaurav/APPLICATION NUMBER.txt"
+      }
+    ]
+  },
+  {
+    "id": "2-gaurav",
+    "name": "Notes",
+    "person": "gaurav",
+    "category": "Personal Docs Misc",
+    "folderPath": "gaurav/Personal Docs Misc",
+    "tags": [
+      "personal docs misc"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Excel",
+        "fileType": "xlsx",
+        "filePath": "files/gaurav/NOTES.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "3-gaurav",
+    "name": "Vehicle History",
+    "person": "gaurav",
+    "category": "Personal Docs Misc",
+    "folderPath": "gaurav/Personal Docs Misc",
+    "tags": [
+      "personal docs misc"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/VehicleHistory.pdf"
+      }
+    ]
+  },
+  {
+    "id": "4-gaurav",
+    "name": "25091199902462 Rent Agreement",
+    "person": "gaurav",
+    "category": "Bike",
+    "folderPath": "gaurav/Bike",
+    "tags": [
+      "bike"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Bike/25091199902462_rent agreement.pdf"
+      },
+      {
+        "label": "PDF 2",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Bike/25091199902462_rent agreement_1.pdf"
+      }
+    ]
+  },
+  {
+    "id": "5-gaurav",
+    "name": "DL",
+    "person": "gaurav",
+    "category": "Bike",
+    "folderPath": "gaurav/Bike",
+    "tags": [
+      "bike"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Bike/DL.pdf"
+      }
+    ]
+  },
+  {
+    "id": "6-gaurav",
+    "name": "Gaurav Thakur Invoice",
+    "person": "gaurav",
+    "category": "Bike",
+    "folderPath": "gaurav/Bike",
+    "tags": [
+      "bike"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Bike/gaurav thakur invoice.pdf"
+      }
+    ]
+  },
+  {
+    "id": "7-gaurav",
+    "name": "Insurance Certificate",
+    "person": "gaurav",
+    "category": "Bike",
+    "folderPath": "gaurav/Bike",
+    "tags": [
+      "bike"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Bike/INSURANCE CERTIFICAte.pdf"
+      }
+    ]
+  },
+  {
+    "id": "8-gaurav",
+    "name": "Policy1 16196140",
+    "person": "gaurav",
+    "category": "Bike",
+    "folderPath": "gaurav/Bike",
+    "tags": [
+      "bike"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Bike/Policy1_16196140.pdf"
+      }
+    ]
+  },
+  {
+    "id": "9-gaurav",
+    "name": "Proforma",
+    "person": "gaurav",
+    "category": "Bike",
+    "folderPath": "gaurav/Bike",
+    "tags": [
+      "bike"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Bike/Proforma.pdf"
+      }
+    ]
+  },
+  {
+    "id": "10-gaurav",
+    "name": "RC",
+    "person": "gaurav",
+    "category": "Bike",
+    "folderPath": "gaurav/Bike",
+    "tags": [
+      "bike"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Bike/RC.pdf"
+      }
+    ]
+  },
+  {
+    "id": "11-gaurav",
+    "name": "Badminton Winner 2017 Prakrida",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/badminton_winner_2017_Prakrida.jpg"
+      }
+    ]
+  },
+  {
+    "id": "12-gaurav",
+    "name": "Best Team Award",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/Best_Team_Award.pdf"
+      }
+    ]
+  },
+  {
+    "id": "13-gaurav",
+    "name": "Best Team Award Feb",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/Best_Team_Award_feb.pdf"
+      }
+    ]
+  },
+  {
+    "id": "14-gaurav",
+    "name": "Best Team Award Page 0001",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Best_Team_Award_page-0001.jpg"
+      }
+    ]
+  },
+  {
+    "id": "15-gaurav",
+    "name": "Cert 1097 26417624",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/cert-1097-26417624.pdf"
+      }
+    ]
+  },
+  {
+    "id": "16-gaurav",
+    "name": "Cert 26417624 1060",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/cert-26417624-1060.pdf"
+      }
+    ]
+  },
+  {
+    "id": "17-gaurav",
+    "name": "Coordinator Badminton Prakrida18",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Coordinator_Badminton_Prakrida18.jpg"
+      }
+    ]
+  },
+  {
+    "id": "18-gaurav",
+    "name": "Coordinator Prakrida 19",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Coordinator_Prakrida 19.jpg"
+      }
+    ]
+  },
+  {
+    "id": "19-gaurav",
+    "name": "Coordinator Public Relation Technica 2017",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Coordinator_Public_relation_Technica_2017.jpg"
+      }
+    ]
+  },
+  {
+    "id": "20-gaurav",
+    "name": "Elevate Wings Award",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/Elevate_Wings_Award.pdf"
+      }
+    ]
+  },
+  {
+    "id": "21-gaurav",
+    "name": "Event Coordinator Badminton Prakrida 2017",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Event_Coordinator_badminton_Prakrida_2017.jpg"
+      }
+    ]
+  },
+  {
+    "id": "22-gaurav",
+    "name": "Football Winner Prakrida2017",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Football_Winner_Prakrida2017.jpg"
+      }
+    ]
+  },
+  {
+    "id": "23-gaurav",
+    "name": "Funzilla Event 3rd Position Technika 2017",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Funzilla_event_3rd_position_Technika 2017.jpg"
+      }
+    ]
+  },
+  {
+    "id": "24-gaurav",
+    "name": "Inplant Training At 33 11 Kv Power Sub Station",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Inplant Training At 33_11 KV power sub station.jpg"
+      }
+    ]
+  },
+  {
+    "id": "25-gaurav",
+    "name": "Jsojpisd 1685360919747 23340dddb9d7fa9b64fb26d6b7b6624a85fc341b3e1a806aadef267c301c3bb8",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/jsojpisd_1685360919747_23340dddb9d7fa9b64fb26d6b7b6624a85fc341b3e1a806aadef267c301c3bb8.pdf"
+      }
+    ]
+  },
+  {
+    "id": "26-gaurav",
+    "name": "Nz9ef0ns 1774685092017",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/nz9ef0ns_1774685092017.pdf"
+      }
+    ]
+  },
+  {
+    "id": "27-gaurav",
+    "name": "On The Spot (team) Award",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/On_the_Spot_(Team)_Award.pdf"
+      }
+    ]
+  },
+  {
+    "id": "28-gaurav",
+    "name": "Spardha Runner Up Football",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Spardha_Runner_Up_Football.jpg"
+      }
+    ]
+  },
+  {
+    "id": "29-gaurav",
+    "name": "Uc 26599fcf 03a4 4223 B07b 760a34e1c8a4",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/UC-26599fcf-03a4-4223-b07b-760a34e1c8a4.pdf"
+      }
+    ]
+  },
+  {
+    "id": "30-gaurav",
+    "name": "Uc 3fc70f17 D3e9 4d61 8cb2 8c91426c1cde",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/UC-3fc70f17-d3e9-4d61-8cb2-8c91426c1cde.pdf"
+      }
+    ]
+  },
+  {
+    "id": "31-gaurav",
+    "name": "Uc 5b10589d 0c40 486c 85ec 9d0bc3cd0154",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/UC-5b10589d-0c40-486c-85ec-9d0bc3cd0154.pdf"
+      }
+    ]
+  },
+  {
+    "id": "32-gaurav",
+    "name": "Uc Aad4dcdf 6c4d 43a3 Bd3e C21a48fb2aff",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/UC-aad4dcdf-6c4d-43a3-bd3e-c21a48fb2aff.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/UC-aad4dcdf-6c4d-43a3-bd3e-c21a48fb2aff.pdf"
+      }
+    ]
+  },
+  {
+    "id": "33-gaurav",
+    "name": "Uc C8b98c56 808c 4bf5 9380 A5d68dab34c0",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/UC-c8b98c56-808c-4bf5-9380-a5d68dab34c0.jpg"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Certificates/UC-c8b98c56-808c-4bf5-9380-a5d68dab34c0.pdf"
+      }
+    ]
+  },
+  {
+    "id": "34-gaurav",
+    "name": "Volley Ball Runner Up Inter Branch Tournament",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/VolleyBall_Runner_Up_Inter_Branch_Tournament.jpg"
+      }
+    ]
+  },
+  {
+    "id": "35-gaurav",
+    "name": "Volunteer Athletic Meet 2017 2018",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Volunteer_Athletic_Meet_2017-2018.jpg"
+      }
+    ]
+  },
+  {
+    "id": "36-gaurav",
+    "name": "Winner Badminton Double Prakrida 2018",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Winner_badminton_Double_Prakrida_2018.jpg"
+      }
+    ]
+  },
+  {
+    "id": "37-gaurav",
+    "name": "Winner Badminton Mix Double+prakrida 2018",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Winner_Badminton_Mix_Double+Prakrida 2018.jpg"
+      }
+    ]
+  },
+  {
+    "id": "38-gaurav",
+    "name": "Winner Badminton Vajra2017",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Winner_Badminton_Vajra2017.jpg"
+      }
+    ]
+  },
+  {
+    "id": "39-gaurav",
+    "name": "Winner March Past Annual Athletic Meet 2018",
+    "person": "gaurav",
+    "category": "Certificates",
+    "folderPath": "gaurav/Certificates",
+    "tags": [
+      "certificates"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Certificates/Winner_march_past_Annual_Athletic_Meet_2018.jpg"
+      }
+    ]
+  },
+  {
+    "id": "40-gaurav",
+    "name": "10th Result",
+    "person": "gaurav",
+    "category": "10th",
+    "folderPath": "gaurav/Education/10th",
+    "tags": [
+      "10th"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Education/10th/10th result.pdf"
+      },
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/10th/10th-result.jpg"
+      }
+    ]
+  },
+  {
+    "id": "41-gaurav",
+    "name": "10th Result Fresh",
+    "person": "gaurav",
+    "category": "10th",
+    "folderPath": "gaurav/Education/10th",
+    "tags": [
+      "10th"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo (Fresh)",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/10th/10th-result_fresh.jpg"
+      }
+    ]
+  },
+  {
+    "id": "42-gaurav",
+    "name": "Admit Card 10th",
+    "person": "gaurav",
+    "category": "10th",
+    "folderPath": "gaurav/Education/10th",
+    "tags": [
+      "10th"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/10th/admitCard_10th.jpg"
+      }
+    ]
+  },
+  {
+    "id": "43-gaurav",
+    "name": "Admit Card",
+    "person": "gaurav",
+    "category": "10th",
+    "folderPath": "gaurav/Education/10th",
+    "tags": [
+      "10th"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/10th/admit_Card.jpg"
+      }
+    ]
+  },
+  {
+    "id": "44-gaurav",
+    "name": "Character Certi",
+    "person": "gaurav",
+    "category": "10th",
+    "folderPath": "gaurav/Education/10th",
+    "tags": [
+      "10th"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/10th/character_certi.jpg"
+      }
+    ]
+  },
+  {
+    "id": "45-gaurav",
+    "name": "Result 10th",
+    "person": "gaurav",
+    "category": "10th",
+    "folderPath": "gaurav/Education/10th",
+    "tags": [
+      "10th"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/10th/result_10th.jpg"
+      }
+    ]
+  },
+  {
+    "id": "46-gaurav",
+    "name": "Admit Card",
+    "person": "gaurav",
+    "category": "BSEB",
+    "folderPath": "gaurav/Education/12th/BSEB",
+    "tags": [
+      "bseb"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/BSEB/admitCard.jpg"
+      }
+    ]
+  },
+  {
+    "id": "47-gaurav",
+    "name": "Certificate 12th",
+    "person": "gaurav",
+    "category": "BSEB",
+    "folderPath": "gaurav/Education/12th/BSEB",
+    "tags": [
+      "bseb"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/BSEB/Certificate_12th.jpg"
+      }
+    ]
+  },
+  {
+    "id": "48-gaurav",
+    "name": "Character",
+    "person": "gaurav",
+    "category": "BSEB",
+    "folderPath": "gaurav/Education/12th/BSEB",
+    "tags": [
+      "bseb"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/BSEB/character.jpg"
+      }
+    ]
+  },
+  {
+    "id": "49-gaurav",
+    "name": "Enlistment Certi BSEB",
+    "person": "gaurav",
+    "category": "BSEB",
+    "folderPath": "gaurav/Education/12th/BSEB",
+    "tags": [
+      "bseb"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/BSEB/EnlistmentCerti_BSEB.jpg"
+      }
+    ]
+  },
+  {
+    "id": "50-gaurav",
+    "name": "Mark Sheet",
+    "person": "gaurav",
+    "category": "BSEB",
+    "folderPath": "gaurav/Education/12th/BSEB",
+    "tags": [
+      "bseb"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/BSEB/markSheet.jpg"
+      }
+    ]
+  },
+  {
+    "id": "51-gaurav",
+    "name": "Provisional",
+    "person": "gaurav",
+    "category": "BSEB",
+    "folderPath": "gaurav/Education/12th/BSEB",
+    "tags": [
+      "bseb"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/BSEB/Provisional.jpg"
+      }
+    ]
+  },
+  {
+    "id": "52-gaurav",
+    "name": "Admit Card 12th",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/admit_card_12th.jpg"
+      }
+    ]
+  },
+  {
+    "id": "53-gaurav",
+    "name": "Admit Card CBSE",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/Admit_card_cbse.jpg"
+      }
+    ]
+  },
+  {
+    "id": "54-gaurav",
+    "name": "Certificate 12th",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/certificate_12th.jpg"
+      }
+    ]
+  },
+  {
+    "id": "55-gaurav",
+    "name": "Character",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/character.jpg"
+      }
+    ]
+  },
+  {
+    "id": "56-gaurav",
+    "name": "Character Certi",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/character_certi.jpg"
+      }
+    ]
+  },
+  {
+    "id": "57-gaurav",
+    "name": "Marksheet CBSE",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/Marksheet_Cbse.jpg"
+      }
+    ]
+  },
+  {
+    "id": "58-gaurav",
+    "name": "Migration",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/Migration.jpg"
+      }
+    ]
+  },
+  {
+    "id": "59-gaurav",
+    "name": "Performance Certi",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/performance_Certi.jpg"
+      }
+    ]
+  },
+  {
+    "id": "60-gaurav",
+    "name": "Registration",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/registration.jpg"
+      }
+    ]
+  },
+  {
+    "id": "61-gaurav",
+    "name": "Registration 12th",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/registration_12th.jpg"
+      }
+    ]
+  },
+  {
+    "id": "62-gaurav",
+    "name": "SLC",
+    "person": "gaurav",
+    "category": "CBSE",
+    "folderPath": "gaurav/Education/12th/CBSE",
+    "tags": [
+      "cbse"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/12th/CBSE/SLC.jpg"
+      }
+    ]
+  },
+  {
+    "id": "63-gaurav",
+    "name": "Degree",
+    "person": "gaurav",
+    "category": "BE",
+    "folderPath": "gaurav/Education/BE",
+    "tags": [
+      "be"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/Degree.jpg"
+      }
+    ]
+  },
+  {
+    "id": "64-gaurav",
+    "name": "Migration",
+    "person": "gaurav",
+    "category": "BE",
+    "folderPath": "gaurav/Education/BE",
+    "tags": [
+      "be"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/Migration.jpg"
+      }
+    ]
+  },
+  {
+    "id": "65-gaurav",
+    "name": "Provisional",
+    "person": "gaurav",
+    "category": "BE",
+    "folderPath": "gaurav/Education/BE",
+    "tags": [
+      "be"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/provisional.jpg"
+      }
+    ]
+  },
+  {
+    "id": "66-gaurav",
+    "name": "1st Sem",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/semester/1st sem.jpg"
+      }
+    ]
+  },
+  {
+    "id": "67-gaurav",
+    "name": "2nd Sem",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/semester/2nd sem.jpg"
+      }
+    ]
+  },
+  {
+    "id": "68-gaurav",
+    "name": "3rd Sem",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/semester/3rd sem.jpg"
+      }
+    ]
+  },
+  {
+    "id": "69-gaurav",
+    "name": "4rth Sem (2)",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/semester/4rth sem (2).jpg"
+      }
+    ]
+  },
+  {
+    "id": "70-gaurav",
+    "name": "5th Sem (2)",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/semester/5th sem (2).jpg"
+      }
+    ]
+  },
+  {
+    "id": "71-gaurav",
+    "name": "5th Sem",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/semester/5th sem.jpg"
+      }
+    ]
+  },
+  {
+    "id": "72-gaurav",
+    "name": "6th Sem",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/semester/6th sem.jpg"
+      }
+    ]
+  },
+  {
+    "id": "73-gaurav",
+    "name": "7th Sem",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Education/BE/semester/7th sem.pdf"
+      }
+    ]
+  },
+  {
+    "id": "74-gaurav",
+    "name": "8th Sem",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Education/BE/semester/8th sem.jpg"
+      }
+    ]
+  },
+  {
+    "id": "75-gaurav",
+    "name": "8th Semester",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Education/BE/semester/8th semester.pdf"
+      }
+    ]
+  },
+  {
+    "id": "76-gaurav",
+    "name": "Summer",
+    "person": "gaurav",
+    "category": "Semester",
+    "folderPath": "gaurav/Education/BE/Semester",
+    "tags": [
+      "semester"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Education/BE/semester/Summer.pdf"
+      }
+    ]
+  },
+  {
+    "id": "77-gaurav",
+    "name": "Annexure",
+    "person": "gaurav",
+    "category": "ITR 2023-2024",
+    "folderPath": "gaurav/ITR 2023-2024",
+    "tags": [
+      "itr 2023-2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/ANNEXURE.pdf"
+      }
+    ]
+  },
+  {
+    "id": "78-gaurav",
+    "name": "Annual Tax Statement",
+    "person": "gaurav",
+    "category": "ITR 2023-2024",
+    "folderPath": "gaurav/ITR 2023-2024",
+    "tags": [
+      "itr 2023-2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/ANNUAL TAX STATEMENT.pdf"
+      }
+    ]
+  },
+  {
+    "id": "79-gaurav",
+    "name": "Form 16 A",
+    "person": "gaurav",
+    "category": "ITR 2023-2024",
+    "folderPath": "gaurav/ITR 2023-2024",
+    "tags": [
+      "itr 2023-2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/FORM 16 A.pdf"
+      }
+    ]
+  },
+  {
+    "id": "80-gaurav",
+    "name": "Form 16 B",
+    "person": "gaurav",
+    "category": "ITR 2023-2024",
+    "folderPath": "gaurav/ITR 2023-2024",
+    "tags": [
+      "itr 2023-2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/FORM 16 B.pdf"
+      }
+    ]
+  },
+  {
+    "id": "81-gaurav",
+    "name": "ITR 2023 2024",
+    "person": "gaurav",
+    "category": "ITR 2023-2024",
+    "folderPath": "gaurav/ITR 2023-2024",
+    "tags": [
+      "itr 2023-2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "ZIP",
+        "fileType": "zip",
+        "filePath": "files/gaurav/ITR 2023_2024/ITR 2023_2024.zip"
+      }
+    ]
+  },
+  {
+    "id": "82-gaurav",
+    "name": "Mutual Fund",
+    "person": "gaurav",
+    "category": "ITR 2023-2024",
+    "folderPath": "gaurav/ITR 2023-2024",
+    "tags": [
+      "itr 2023-2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Excel",
+        "fileType": "xlsx",
+        "filePath": "files/gaurav/ITR 2023_2024/mutual fund.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "83-gaurav",
+    "name": "Salary Data",
+    "person": "gaurav",
+    "category": "ITR 2023-2024",
+    "folderPath": "gaurav/ITR 2023-2024",
+    "tags": [
+      "itr 2023-2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Excel",
+        "fileType": "xlsx",
+        "filePath": "files/gaurav/ITR 2023_2024/SalaryData.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "84-gaurav",
+    "name": "Tax Calculator Fy25 1992242",
+    "person": "gaurav",
+    "category": "ITR 2023-2024",
+    "folderPath": "gaurav/ITR 2023-2024",
+    "tags": [
+      "itr 2023-2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Excel",
+        "fileType": "xls",
+        "filePath": "files/gaurav/ITR 2023_2024/TaxCalculatorFY25_1992242.xls"
+      }
+    ]
+  },
+  {
+    "id": "85-gaurav",
+    "name": "Taxpnl Ej0287 2023 2024 Q1 Q4",
+    "person": "gaurav",
+    "category": "ITR 2023-2024",
+    "folderPath": "gaurav/ITR 2023-2024",
+    "tags": [
+      "itr 2023-2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Excel",
+        "fileType": "xlsx",
+        "filePath": "files/gaurav/ITR 2023_2024/taxpnl-EJ0287-2023_2024-Q1-Q4.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "86-gaurav",
+    "name": "01 Apr 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/01 APR-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "87-gaurav",
+    "name": "02 May 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/02 MAY-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "88-gaurav",
+    "name": "03 June 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/03 JUNE-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "89-gaurav",
+    "name": "04 July 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/04 JULY-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "90-gaurav",
+    "name": "05 Aug 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/05 AUG-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "91-gaurav",
+    "name": "06 Sept 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/06 SEPT-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "92-gaurav",
+    "name": "07 Oct 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/07 OCT-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "93-gaurav",
+    "name": "08 Nov 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/08 NOV-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "94-gaurav",
+    "name": "09 Dec 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/09 DEC-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "95-gaurav",
+    "name": "10 Jan 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/10 JAN-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "96-gaurav",
+    "name": "11 Feb 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/11 FEB-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "97-gaurav",
+    "name": "12 Mar 2023",
+    "person": "gaurav",
+    "category": "Salary Slip",
+    "folderPath": "gaurav/ITR 2023-2024/Salary Slip",
+    "tags": [
+      "salary slip"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/ITR 2023_2024/SALARY SLIP/12 MAR-2023.pdf"
+      }
+    ]
+  },
+  {
+    "id": "98-gaurav",
+    "name": "Speed 24 25",
+    "person": "gaurav",
+    "category": "TCS",
+    "folderPath": "gaurav/Job/TCS",
+    "tags": [
+      "tcs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Excel",
+        "fileType": "xlsx",
+        "filePath": "files/gaurav/Job/TCS/Speed 24-25.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "99-gaurav",
+    "name": "Compensation Letter 24 25",
+    "person": "gaurav",
+    "category": "Compensation Letter",
+    "folderPath": "gaurav/Job/TCS/Compensation Letter",
+    "tags": [
+      "compensation letter"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/COMPENSATION LETTER/COMPENSATION LETTER 24_25.pdf"
+      }
+    ]
+  },
+  {
+    "id": "100-gaurav",
+    "name": "Dt20195622692 JL",
+    "person": "gaurav",
+    "category": "OL and JL",
+    "folderPath": "gaurav/Job/TCS/OL and JL",
+    "tags": [
+      "ol and jl"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/OL AND JL/DT20195622692_JL.pdf"
+      }
+    ]
+  },
+  {
+    "id": "101-gaurav",
+    "name": "Dt20195622692 OL (1)",
+    "person": "gaurav",
+    "category": "OL and JL",
+    "folderPath": "gaurav/Job/TCS/OL and JL",
+    "tags": [
+      "ol and jl"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/OL AND JL/DT20195622692_OL (1).pdf"
+      }
+    ]
+  },
+  {
+    "id": "102-gaurav",
+    "name": "Nqt21030088976 Stage1 4631602520 4357490109",
+    "person": "gaurav",
+    "category": "OL and JL",
+    "folderPath": "gaurav/Job/TCS/OL and JL",
+    "tags": [
+      "ol and jl"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/OL AND JL/NQT21030088976_Stage1_4631602520_4357490109.pdf"
+      }
+    ]
+  },
+  {
+    "id": "103-gaurav",
+    "name": "Offer Letter TCS",
+    "person": "gaurav",
+    "category": "OL and JL",
+    "folderPath": "gaurav/Job/TCS/OL and JL",
+    "tags": [
+      "ol and jl"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/OL AND JL/Offer letter TCS.pdf"
+      }
+    ]
+  },
+  {
+    "id": "104-gaurav",
+    "name": "May 2021",
+    "person": "gaurav",
+    "category": "Salary Slips",
+    "folderPath": "gaurav/Job/TCS/Salary Slips",
+    "tags": [
+      "salary slips"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/May 2021.pdf"
+      }
+    ]
+  },
+  {
+    "id": "105-gaurav",
+    "name": "TCS Revised Compensation",
+    "person": "gaurav",
+    "category": "Salary Slips",
+    "folderPath": "gaurav/Job/TCS/Salary Slips",
+    "tags": [
+      "salary slips"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/TCS Revised Compensation.pdf"
+      }
+    ]
+  },
+  {
+    "id": "106-gaurav",
+    "name": "Terms And Condition",
+    "person": "gaurav",
+    "category": "Salary Slips",
+    "folderPath": "gaurav/Job/TCS/Salary Slips",
+    "tags": [
+      "salary slips"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/Terms and Condition.pdf"
+      }
+    ]
+  },
+  {
+    "id": "107-gaurav",
+    "name": "11 Nov",
+    "person": "gaurav",
+    "category": "2023",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2023",
+    "tags": [
+      "2023"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2023/11_NOV.pdf"
+      }
+    ]
+  },
+  {
+    "id": "108-gaurav",
+    "name": "12 Dec",
+    "person": "gaurav",
+    "category": "2023",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2023",
+    "tags": [
+      "2023"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2023/12_DEC.pdf"
+      }
+    ]
+  },
+  {
+    "id": "109-gaurav",
+    "name": "1 Jan",
+    "person": "gaurav",
+    "category": "2023",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2023",
+    "tags": [
+      "2023"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2023/1_JAN.pdf"
+      }
+    ]
+  },
+  {
+    "id": "110-gaurav",
+    "name": "2 Feb",
+    "person": "gaurav",
+    "category": "2023",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2023",
+    "tags": [
+      "2023"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2023/2_FEB.pdf"
+      }
+    ]
+  },
+  {
+    "id": "111-gaurav",
+    "name": "3 Mar",
+    "person": "gaurav",
+    "category": "2023",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2023",
+    "tags": [
+      "2023"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2023/3_MAR.pdf"
+      }
+    ]
+  },
+  {
+    "id": "112-gaurav",
+    "name": "5 May",
+    "person": "gaurav",
+    "category": "2023",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2023",
+    "tags": [
+      "2023"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2023/5_MAY.pdf"
+      }
+    ]
+  },
+  {
+    "id": "113-gaurav",
+    "name": "6 Jun",
+    "person": "gaurav",
+    "category": "2023",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2023",
+    "tags": [
+      "2023"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2023/6_JUN.pdf"
+      }
+    ]
+  },
+  {
+    "id": "114-gaurav",
+    "name": "7 Jul",
+    "person": "gaurav",
+    "category": "2023",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2023",
+    "tags": [
+      "2023"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2023/7_JUL.pdf"
+      }
+    ]
+  },
+  {
+    "id": "115-gaurav",
+    "name": "10 Oct",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/10_OCT.pdf"
+      }
+    ]
+  },
+  {
+    "id": "116-gaurav",
+    "name": "11 Nov",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/11_NOV.pdf"
+      }
+    ]
+  },
+  {
+    "id": "117-gaurav",
+    "name": "12 Dec",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/12_DEC.pdf"
+      }
+    ]
+  },
+  {
+    "id": "118-gaurav",
+    "name": "1 Jan",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/1_JAN.pdf"
+      }
+    ]
+  },
+  {
+    "id": "119-gaurav",
+    "name": "2 Feb",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/2_FEB.pdf"
+      }
+    ]
+  },
+  {
+    "id": "120-gaurav",
+    "name": "3 Mar",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/3_MAR.pdf"
+      }
+    ]
+  },
+  {
+    "id": "121-gaurav",
+    "name": "4 Apr",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/4_APR.pdf"
+      }
+    ]
+  },
+  {
+    "id": "122-gaurav",
+    "name": "5 May",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/5_MAY.pdf"
+      }
+    ]
+  },
+  {
+    "id": "123-gaurav",
+    "name": "6 Jun",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/6_JUN.pdf"
+      }
+    ]
+  },
+  {
+    "id": "124-gaurav",
+    "name": "7 Jul",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/7_JUL.pdf"
+      }
+    ]
+  },
+  {
+    "id": "125-gaurav",
+    "name": "8 Aug",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/8_AUG.pdf"
+      }
+    ]
+  },
+  {
+    "id": "126-gaurav",
+    "name": "9 Sep",
+    "person": "gaurav",
+    "category": "2024",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2024",
+    "tags": [
+      "2024"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2024/9_SEP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "127-gaurav",
+    "name": "11 Nov",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/11_NOV.pdf"
+      }
+    ]
+  },
+  {
+    "id": "128-gaurav",
+    "name": "12 Dec",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/12_DEC.pdf"
+      }
+    ]
+  },
+  {
+    "id": "129-gaurav",
+    "name": "1 Jan",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/1_JAN.pdf"
+      }
+    ]
+  },
+  {
+    "id": "130-gaurav",
+    "name": "2 Feb",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/2_FEB.pdf"
+      }
+    ]
+  },
+  {
+    "id": "131-gaurav",
+    "name": "3 Mar",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/3_MAR.pdf"
+      }
+    ]
+  },
+  {
+    "id": "132-gaurav",
+    "name": "4 Apr",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/4_APR.pdf"
+      }
+    ]
+  },
+  {
+    "id": "133-gaurav",
+    "name": "5 May",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/5_MAY.pdf"
+      }
+    ]
+  },
+  {
+    "id": "134-gaurav",
+    "name": "6 Jun",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/6_JUN.pdf"
+      }
+    ]
+  },
+  {
+    "id": "135-gaurav",
+    "name": "7 Jul",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/7_JUL.pdf"
+      }
+    ]
+  },
+  {
+    "id": "136-gaurav",
+    "name": "8 Aug",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/8_AUG.pdf"
+      }
+    ]
+  },
+  {
+    "id": "137-gaurav",
+    "name": "9 Sep",
+    "person": "gaurav",
+    "category": "2025",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2025",
+    "tags": [
+      "2025"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2025/9_SEP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "138-gaurav",
+    "name": "1 Jan",
+    "person": "gaurav",
+    "category": "2026",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/2026",
+    "tags": [
+      "2026"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/2026/1_JAN.pdf"
+      }
+    ]
+  },
+  {
+    "id": "139-gaurav",
+    "name": "Axis Cc Salary Slip Dec2025",
+    "person": "gaurav",
+    "category": "Last Three Months",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/Last Three Months",
+    "tags": [
+      "last three months"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/LAST THREE MONT/Axis_CC_SalarySlip_Dec2025.pdf"
+      }
+    ]
+  },
+  {
+    "id": "140-gaurav",
+    "name": "Axis Cc Salary Slip Jan2026",
+    "person": "gaurav",
+    "category": "Last Three Months",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/Last Three Months",
+    "tags": [
+      "last three months"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/LAST THREE MONT/Axis_CC_SalarySlip_Jan2026.pdf"
+      }
+    ]
+  },
+  {
+    "id": "141-gaurav",
+    "name": "Axis Cc Salary Slip Nov2025",
+    "person": "gaurav",
+    "category": "Last Three Months",
+    "folderPath": "gaurav/Job/TCS/Salary Slips/Last Three Months",
+    "tags": [
+      "last three months"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/TCS/SALARY SLIPS/LAST THREE MONT/Axis_CC_SalarySlip_Nov2025.pdf"
+      }
+    ]
+  },
+  {
+    "id": "142-gaurav",
+    "name": "Vd02641 Gaurav Thakur",
+    "person": "gaurav",
+    "category": "Vedantu",
+    "folderPath": "gaurav/Job/Vedantu",
+    "tags": [
+      "vedantu"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/VEDANTU/VD02641 - Gaurav Thakur.pdf"
+      }
+    ]
+  },
+  {
+    "id": "143-gaurav",
+    "name": "Vd02641 Payslip May2020",
+    "person": "gaurav",
+    "category": "Vedantu",
+    "folderPath": "gaurav/Job/Vedantu",
+    "tags": [
+      "vedantu"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/VEDANTU/VD02641_Payslip_May2020.pdf"
+      }
+    ]
+  },
+  {
+    "id": "144-gaurav",
+    "name": "Vedantu PF Form",
+    "person": "gaurav",
+    "category": "Vedantu",
+    "folderPath": "gaurav/Job/Vedantu",
+    "tags": [
+      "vedantu"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Job/VEDANTU/vedantu_pf_form.pdf"
+      }
+    ]
+  },
+  {
+    "id": "145-gaurav",
+    "name": "Vednatu Exit Clearance Form (1)",
+    "person": "gaurav",
+    "category": "Vedantu",
+    "folderPath": "gaurav/Job/Vedantu",
+    "tags": [
+      "vedantu"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Word",
+        "fileType": "docx",
+        "filePath": "files/gaurav/Job/VEDANTU/Vednatu- Exit Clearance Form (1).docx"
+      }
+    ]
+  },
+  {
+    "id": "146-gaurav",
+    "name": "Grv Sign1",
+    "person": "gaurav",
+    "category": "Passport Photo and Signature",
+    "folderPath": "gaurav/Passport Photo and Signature",
+    "tags": [
+      "passport photo and signature"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/PASSPORT PHOTO_ SIGNATURE/grv sign1.jpg"
+      }
+    ]
+  },
+  {
+    "id": "147-gaurav",
+    "name": "Img 20210111 Wa0019",
+    "person": "gaurav",
+    "category": "Passport Photo and Signature",
+    "folderPath": "gaurav/Passport Photo and Signature",
+    "tags": [
+      "passport photo and signature"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/PASSPORT PHOTO_ SIGNATURE/IMG-20210111-WA0019.jpg"
+      }
+    ]
+  },
+  {
+    "id": "148-gaurav",
+    "name": "Img 20220624 134623",
+    "person": "gaurav",
+    "category": "Passport Photo and Signature",
+    "folderPath": "gaurav/Passport Photo and Signature",
+    "tags": [
+      "passport photo and signature"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/PASSPORT PHOTO_ SIGNATURE/IMG_20220624_134623.jpg"
+      }
+    ]
+  },
+  {
+    "id": "149-gaurav",
+    "name": "Passport Photo 132+kb",
+    "person": "gaurav",
+    "category": "Passport Photo and Signature",
+    "folderPath": "gaurav/Passport Photo and Signature",
+    "tags": [
+      "passport photo and signature"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpeg",
+        "filePath": "files/gaurav/PASSPORT PHOTO_ SIGNATURE/PASSPORT PHOTO_132+KB.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "150-gaurav",
+    "name": "Passport Grv",
+    "person": "gaurav",
+    "category": "Passport Photo and Signature",
+    "folderPath": "gaurav/Passport Photo and Signature",
+    "tags": [
+      "passport photo and signature"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/PASSPORT PHOTO_ SIGNATURE/PASSPORT_GRV.jpg"
+      }
+    ]
+  },
+  {
+    "id": "151-gaurav",
+    "name": "Passport Grv 96kb",
+    "person": "gaurav",
+    "category": "Passport Photo and Signature",
+    "folderPath": "gaurav/Passport Photo and Signature",
+    "tags": [
+      "passport photo and signature"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpeg",
+        "filePath": "files/gaurav/PASSPORT PHOTO_ SIGNATURE/PASSPORT_GRV_96KB.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "152-gaurav",
+    "name": "Sign English (1)",
+    "person": "gaurav",
+    "category": "Passport Photo and Signature",
+    "folderPath": "gaurav/Passport Photo and Signature",
+    "tags": [
+      "passport photo and signature"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/PASSPORT PHOTO_ SIGNATURE/SIGN ENGLISH (1).jpg"
+      }
+    ]
+  },
+  {
+    "id": "153-gaurav",
+    "name": "Sign Grv English",
+    "person": "gaurav",
+    "category": "Passport Photo and Signature",
+    "folderPath": "gaurav/Passport Photo and Signature",
+    "tags": [
+      "passport photo and signature"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "png",
+        "filePath": "files/gaurav/PASSPORT PHOTO_ SIGNATURE/SIGN_GRV_ENGLISH.png"
+      }
+    ]
+  },
+  {
+    "id": "154-gaurav",
+    "name": "Sign Grv English 80kb",
+    "person": "gaurav",
+    "category": "Passport Photo and Signature",
+    "folderPath": "gaurav/Passport Photo and Signature",
+    "tags": [
+      "passport photo and signature"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpeg",
+        "filePath": "files/gaurav/PASSPORT PHOTO_ SIGNATURE/SIGN_GRV_ENGLISH_80KB.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "155-gaurav",
+    "name": "Aadhar Original",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/aadhar original.pdf"
+      }
+    ]
+  },
+  {
+    "id": "156-gaurav",
+    "name": "Ack257844520010925",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/ACK257844520010925.pdf"
+      }
+    ]
+  },
+  {
+    "id": "157-gaurav",
+    "name": "Brcco 2025 10993745",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/BRCCO_2025_10993745.pdf"
+      }
+    ]
+  },
+  {
+    "id": "158-gaurav",
+    "name": "E Epic Uvk2459568",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/e-EPIC_UVK2459568.pdf"
+      }
+    ]
+  },
+  {
+    "id": "159-gaurav",
+    "name": "Eaadhaar Updated",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/EAadhaar_updated.pdf"
+      }
+    ]
+  },
+  {
+    "id": "160-gaurav",
+    "name": "EPFO",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/epfo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "161-gaurav",
+    "name": "Form8 S04079o8c1912231200041.pdf",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/Form8_S04079O8C1912231200041.pdf.pdf"
+      }
+    ]
+  },
+  {
+    "id": "162-gaurav",
+    "name": "Grv Sign1 Fotor Bg Remover 20240214124345",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "png",
+        "filePath": "files/gaurav/Personal Docs/grv sign1-fotor-bg-remover-20240214124345.png"
+      }
+    ]
+  },
+  {
+    "id": "163-gaurav",
+    "name": "Grv Sign1",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Personal Docs/grv sign1.jpg"
+      }
+    ]
+  },
+  {
+    "id": "164-gaurav",
+    "name": "Img 20161225 140858 Hdr",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Personal Docs/IMG_20161225_140858_HDR.jpg"
+      }
+    ]
+  },
+  {
+    "id": "165-gaurav",
+    "name": "Licensepanadharatm",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Personal Docs/licensepanadharatm.jpg"
+      }
+    ]
+  },
+  {
+    "id": "166-gaurav",
+    "name": "PAN Card",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Personal Docs/PAN CARD.jpg"
+      }
+    ]
+  },
+  {
+    "id": "167-gaurav",
+    "name": "PAN Original",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/pan original.pdf"
+      }
+    ]
+  },
+  {
+    "id": "168-gaurav",
+    "name": "Passbook PDF",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/passbook pdf.pdf"
+      }
+    ]
+  },
+  {
+    "id": "169-gaurav",
+    "name": "Passport",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Personal Docs/passport.jpg"
+      }
+    ]
+  },
+  {
+    "id": "170-gaurav",
+    "name": "Passport Back",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Back",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Personal Docs/passport_back.jpg"
+      }
+    ]
+  },
+  {
+    "id": "171-gaurav",
+    "name": "Sparklet A13 804[1]",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "Word",
+        "fileType": "docx",
+        "filePath": "files/gaurav/Personal Docs/Sparklet_A13-804[1].docx"
+      },
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/Sparklet_A13-804[1].pdf"
+      }
+    ]
+  },
+  {
+    "id": "172-gaurav",
+    "name": "Ttp2230282 Dbg Voter ID",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/TTP2230282_dbg_voterId.pdf"
+      }
+    ]
+  },
+  {
+    "id": "173-gaurav",
+    "name": "Voter ID Correction Form",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/voter_id_correction_form.pdf"
+      }
+    ]
+  },
+  {
+    "id": "174-gaurav",
+    "name": "Epfindia Gov In Memberinterface Profile Viewmember Viewmemberidpage 2023 10 26 22 57 03",
+    "person": "gaurav",
+    "category": "PF Related",
+    "folderPath": "gaurav/PF Related",
+    "tags": [
+      "pf related"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/PF related/epfindia-gov-in-memberinterface-profile-viewmember-viewmemberidpage-2023-10-26-22_57_03.pdf"
+      }
+    ]
+  },
+  {
+    "id": "175-gaurav",
+    "name": "Pykrp12797520000012454 2019",
+    "person": "gaurav",
+    "category": "PF Related",
+    "folderPath": "gaurav/PF Related",
+    "tags": [
+      "pf related"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/PF related/PYKRP12797520000012454_2019.pdf"
+      }
+    ]
+  },
+  {
+    "id": "176-gaurav",
+    "name": "Pykrp12797520000012454 2020",
+    "person": "gaurav",
+    "category": "PF Related",
+    "folderPath": "gaurav/PF Related",
+    "tags": [
+      "pf related"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/PF related/PYKRP12797520000012454_2020.pdf"
+      }
+    ]
+  },
+  {
+    "id": "177-gaurav",
+    "name": "Pykrp12797520000012454 2021",
+    "person": "gaurav",
+    "category": "PF Related",
+    "folderPath": "gaurav/PF Related",
+    "tags": [
+      "pf related"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/PF related/PYKRP12797520000012454_2021.pdf"
+      }
+    ]
+  },
+  {
+    "id": "178-gaurav",
+    "name": "Pykrp12797520000012454 2022",
+    "person": "gaurav",
+    "category": "PF Related",
+    "folderPath": "gaurav/PF Related",
+    "tags": [
+      "pf related"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/PF related/PYKRP12797520000012454_2022.pdf"
+      }
+    ]
+  },
+  {
+    "id": "179-gaurav",
+    "name": "Grv Resume Database",
+    "person": "gaurav",
+    "category": "Resume",
+    "folderPath": "gaurav/Resume",
+    "tags": [
+      "resume"
+    ],
+    "lastUpdated": "2026-07-10",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Resume/GRV_RESUME_DATABASE.pdf"
+      }
+    ]
+  }
+]
