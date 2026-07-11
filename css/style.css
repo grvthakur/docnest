@@ -812,3 +812,48 @@ body {
   background: var(--primary);
   color: #fff;
 }
+
+/* Version info button (global, fixed top-right) */
+.version-info-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 500;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-light);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+.version-info-btn:hover {
+  background: var(--bg);
+  color: var(--primary);
+}
+.version-info-popup {
+  position: fixed;
+  top: 3.2rem;
+  right: 1rem;
+  z-index: 500;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.9rem 1rem;
+  font-size: 0.85rem;
+  min-width: 220px;
+  max-width: 300px;
+}
+.version-info-row {
+  margin-bottom: 0.4rem;
+  word-break: break-word;
+}
+.version-info-row:last-child {
+  margin-bottom: 0;
+}
