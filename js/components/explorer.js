@@ -11,6 +11,7 @@ export class ExplorerComponent {
     this.searchQuery = "";
     this.activeFilter = "all";
     this.sortBy = "name"; // "name" | "date" | "type"
+    this.listView = false;
     // Tracks which folder nodes are expanded, keyed by full folder path.
     // Persists across re-renders/navigation for the life of this component.
     this.expandedFolders = new Set();
@@ -47,16 +48,18 @@ export class ExplorerComponent {
       this.sidebar = createElement("div", { className: "sidebar" });
       this.renderSidebar();
       this.container.appendChild(this.sidebar);
+      this.addMobileSupport();
       this.renderBreadcrumb();
     }
 
     this.docGrid = null;
     this.renderToolbar();
-    this.docGrid = createElement("div", { className: "documents-grid" });
+    this.docGrid = createElement("div", {
+      className: `documents-grid ${this.listView ? "list-view" : ""}`,
+    });
     this.main.appendChild(this.docGrid);
     this.container.appendChild(this.main);
 
-    if (!this.isFlat) this.addMobileSupport();
     this.renderDocuments();
     return this.container;
   }
@@ -309,6 +312,21 @@ export class ExplorerComponent {
       sortSelect.appendChild(optionEl);
     });
 
+    const viewToggle = createElement(
+      "button",
+      {
+        className: "btn btn-outline view-toggle-btn",
+        title: "Toggle grid/list view",
+        onClick: () => {
+          this.listView = !this.listView;
+          if (this.docGrid) {
+            this.docGrid.classList.toggle("list-view", this.listView);
+          }
+        },
+      },
+      [this.listView ? "⊞" : "☰"],
+    );
+
     const hasActiveFilters =
       this.searchQuery.trim().length > 0 || this.activeFilter !== "all";
     const clearBtn = createElement(
@@ -329,6 +347,7 @@ export class ExplorerComponent {
 
     const toolbarRight = createElement("div", { className: "toolbar-right" }, [
       sortSelect,
+      viewToggle,
       filterGroup,
       clearBtn,
     ]);
@@ -414,7 +433,7 @@ export class ExplorerComponent {
       );
       return;
     }
-    for (const doc of docs) {
+    docs.forEach((doc, index) => {
       const primaryType = this.getPrimaryType(doc);
       const typeClass = this.getTypeClass(primaryType);
       const badgeRow = createElement(
@@ -452,7 +471,38 @@ export class ExplorerComponent {
           ])
         : null;
 
+      // Quick actions revealed on hover: preview + download first variant.
+      const firstVariant = (doc.variants || [])[0];
+      const actions = createElement("div", { className: "doc-actions" }, [
+        createElement(
+          "span",
+          {
+            className: "doc-action-btn",
+            title: "Preview",
+            onClick: (e) => {
+              e.stopPropagation();
+              this.onDocumentClick(doc);
+            },
+          },
+          ["👁"],
+        ),
+        createElement(
+          "a",
+          {
+            className: "doc-action-btn",
+            title: "Download",
+            href: firstVariant ? firstVariant.filePath : "#",
+            download: firstVariant
+              ? firstVariant.filePath.split("/").pop()
+              : "",
+            onClick: (e) => e.stopPropagation(),
+          },
+          ["⬇"],
+        ),
+      ]);
+
       const cardChildren = [
+        actions,
         iconEl,
         createElement("div", { className: "document-name" }, [doc.name]),
         createElement("div", { className: "document-type" }, [
@@ -466,12 +516,13 @@ export class ExplorerComponent {
         "div",
         {
           className: `card document-card ${typeClass}`,
+          style: `--i:${index};`,
           onClick: () => this.onDocumentClick(doc),
         },
         cardChildren,
       );
       this.docGrid.appendChild(card);
-    }
+    });
   }
 
   // Returns the first image variant of a document, if any, for thumbnail use.
@@ -544,8 +595,7 @@ export class ExplorerComponent {
     const hamburger = createElement(
       "button",
       {
-        className: "btn btn-outline",
-        style: "display:none;",
+        className: "btn btn-outline mobile-menu-btn",
         onClick: () => {
           this.sidebar.classList.toggle("open");
         },
@@ -553,11 +603,5 @@ export class ExplorerComponent {
       ["☰ Folders"],
     );
     this.main.insertBefore(hamburger, this.main.firstChild);
-    if (!document.getElementById("docnest-mobile-style")) {
-      const style = document.createElement("style");
-      style.id = "docnest-mobile-style";
-      style.textContent = `@media (max-width: 768px) { .explorer > .btn-outline { display: inline-flex; } }`;
-      document.head.appendChild(style);
-    }
   }
 }

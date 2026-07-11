@@ -90,9 +90,7 @@ export function mountTopControls() {
         ]),
         createElement("div", { className: "version-info-row" }, [
           createElement("strong", {}, ["Deployed: "]),
-          data.deployedAt
-            ? new Date(data.deployedAt).toLocaleString()
-            : "N/A",
+          data.deployedAt ? new Date(data.deployedAt).toLocaleString() : "N/A",
         ]),
       );
     } catch (e) {

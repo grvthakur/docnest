@@ -16,6 +16,7 @@
     "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
   --transition: 0.2s ease;
+  --topbar-h: 56px;
 }
 
 [data-theme="dark"] {
@@ -50,10 +51,12 @@ body {
     color var(--transition);
 }
 
+/* Push all page content below the fixed top bar so nothing collides with it */
 #app {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding-top: var(--topbar-h);
 }
 
 /* Utility */
@@ -143,7 +146,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--topbar-h));
   padding: 2rem;
   animation: fadeIn 0.4s ease;
 }
@@ -191,6 +194,8 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 .dashboard-header h2 {
   font-family: var(--font-display);
@@ -214,6 +219,25 @@ body {
   transition:
     transform var(--transition),
     box-shadow var(--transition);
+  animation: slideDown 0.35s ease both;
+}
+.person-grid > *:nth-child(1) {
+  animation-delay: 0ms;
+}
+.person-grid > *:nth-child(2) {
+  animation-delay: 40ms;
+}
+.person-grid > *:nth-child(3) {
+  animation-delay: 80ms;
+}
+.person-grid > *:nth-child(4) {
+  animation-delay: 120ms;
+}
+.person-grid > *:nth-child(5) {
+  animation-delay: 160ms;
+}
+.person-grid > *:nth-child(6) {
+  animation-delay: 200ms;
 }
 .person-card:hover {
   transform: translateY(-4px) scale(1.02);
@@ -255,7 +279,7 @@ body {
 /* Explorer Layout */
 .explorer {
   display: flex;
-  height: calc(100vh - 60px); /* adjust for header */
+  height: calc(100vh - var(--topbar-h));
   overflow: hidden;
   animation: fadeIn 0.3s ease;
 }
@@ -335,9 +359,11 @@ body {
   background: var(--bg);
 }
 .folder-item.active {
-  background: var(--primary-light);
+  background: linear-gradient(90deg, var(--primary-light), transparent);
   color: var(--primary);
   font-weight: 600;
+  border-left: 3px solid var(--primary);
+  padding-left: calc(0.5rem - 3px);
 }
 .folder-item-static {
   cursor: default;
@@ -472,6 +498,10 @@ body {
   font-size: 0.85rem;
   cursor: pointer;
 }
+.view-toggle-btn {
+  padding: 0.5rem 0.7rem;
+  font-size: 0.9rem;
+}
 .clear-filters-btn {
   padding: 0.5rem 0.9rem;
   font-size: 0.85rem;
@@ -511,7 +541,21 @@ body {
   overflow-y: auto;
   flex: 1;
 }
+.documents-grid.list-view {
+  grid-template-columns: 1fr;
+}
+.documents-grid.list-view .document-card {
+  flex-direction: row;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  gap: 1rem;
+}
+.documents-grid.list-view .format-badges {
+  justify-content: flex-start;
+}
+
 .document-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -524,10 +568,14 @@ body {
   transition:
     transform var(--transition),
     box-shadow var(--transition);
+  animation: slideDown 0.35s ease both;
+  animation-delay: calc(var(--i, 0) * 35ms);
 }
 .document-card:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg),
+    0 0 0 2px var(--primary) inset;
 }
 .document-icon {
   font-size: 2.5rem;
@@ -561,7 +609,46 @@ body {
   color: var(--text-light);
 }
 
-/* Color coding by file type (badges + icon bg only — no flat top border) */
+/* Quick actions: preview / download, fade in on hover */
+.doc-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.3rem;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
+}
+.document-card:hover .doc-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+.doc-action-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+.doc-action-btn:hover {
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  color: #fff;
+}
+
+/* Color coding by file type (icon bg + text color) */
 .type-pdf .document-icon {
   background: #fee2e2;
   color: #dc2626;
@@ -585,6 +672,93 @@ body {
 .type-other .document-icon {
   background: var(--bg);
   color: var(--text-light);
+}
+
+/* Format badges, colors synced to the icon colors above */
+.format-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+.format-badge {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  background: var(--primary-light);
+  color: var(--primary);
+  white-space: nowrap;
+  font-weight: 600;
+}
+.format-badge-pdf {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.format-badge-image {
+  background: #dbeafe;
+  color: #2563eb;
+}
+.format-badge-word {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+.format-badge-excel {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.format-badge-zip {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.format-switcher {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  background: var(--bg);
+}
+.format-tab {
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.format-tab.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.explorer-flat .explorer-main {
+  width: 100%;
+}
+.flat-header {
+  padding: 1rem 1rem 0 1rem;
+  background: var(--card-bg);
+}
+.flat-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: 0.2px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  background: var(--card-bg);
+}
+.modal-footer-list {
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 /* Modal */
@@ -664,130 +838,11 @@ body {
   right: 1rem;
 }
 
-/* Bottom Navigation (Mobile) */
-.bottom-nav {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--card-bg);
-  border-top: 1px solid var(--border);
-  padding: 0.75rem;
-  z-index: 50;
-}
-@media (max-width: 768px) {
-  .sidebar {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: 200;
-    width: 280px;
-    box-shadow: var(--shadow-lg);
-  }
-  .sidebar.open {
-    display: block;
-  }
-  .explorer {
-    flex-direction: column;
-  }
-  .bottom-nav {
-    display: flex;
-    justify-content: space-around;
-  }
-  .person-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-  .documents-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-  .top-controls {
-    top: 0.5rem;
-    right: 0.5rem;
-  }
-}
-
-/* Utility: hidden */
-.hidden {
-  display: none !important;
-}
-
-/* --- Multi-format documents (PDF/Photo variants) --- */
-
-.format-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  justify-content: center;
-  margin-top: 0.25rem;
-}
-.format-badge {
-  font-size: 0.7rem;
-  padding: 0.15rem 0.5rem;
-  border-radius: 10px;
-  background: var(--primary-light);
-  color: var(--primary);
-  white-space: nowrap;
-  font-weight: 600;
-}
-
-.format-switcher {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-  background: var(--bg);
-}
-.format-tab {
-  padding: 0.4rem 0.9rem;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  background: var(--card-bg);
-  color: var(--text);
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-.format-tab.active {
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  color: #fff;
-  border-color: var(--primary);
-}
-
-.explorer-flat .explorer-main {
-  width: 100%;
-}
-.flat-header {
-  padding: 1rem 1rem 0 1rem;
-  background: var(--card-bg);
-}
-.flat-header h2 {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  letter-spacing: 0.2px;
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  border-top: 1px solid var(--border);
-  background: var(--card-bg);
-}
-.modal-footer-list {
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
 /* Wider modal so the side-by-side split view has room to breathe */
 .modal-wide {
   width: 95vw;
   max-width: 1400px;
 }
-
 .modal-body-split {
   display: flex;
   align-items: stretch;
@@ -795,7 +850,6 @@ body {
   gap: 0;
   padding: 0;
 }
-
 .viewer-panel {
   flex: 1 1 50%;
   min-width: 0;
@@ -811,7 +865,6 @@ body {
 .viewer-panel-full {
   flex: 1 1 100%;
 }
-
 .viewer-images-panel {
   background: var(--bg);
 }
@@ -842,7 +895,6 @@ body {
   color: var(--text-light);
   font-weight: 500;
 }
-
 .viewer-pdf-panel {
   padding: 0;
 }
@@ -852,7 +904,6 @@ body {
   min-height: 70vh;
   border: none;
 }
-
 .viewer-others-bar {
   display: flex;
   align-items: center;
@@ -865,19 +916,6 @@ body {
 .viewer-others-label {
   font-size: 0.85rem;
   color: var(--text-light);
-}
-
-@media (max-width: 768px) {
-  .modal-body-split {
-    flex-direction: column;
-  }
-  .viewer-panel + .viewer-panel {
-    border-left: none;
-    border-top: 1px solid var(--border);
-  }
-  .viewer-pdf-panel iframe {
-    min-height: 50vh;
-  }
 }
 
 .breadcrumb-back {
@@ -895,19 +933,22 @@ body {
   color: #fff;
 }
 
-/* ---------- Top controls: fixed pill, top-right, frosted glass ---------- */
+/* ---------- Top bar: full-width sticky/frosted strip, never overlaps page content ---------- */
 .top-controls {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--topbar-h);
   z-index: 999;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
   gap: 0.4rem;
-  background: color-mix(in srgb, var(--card-bg) 80%, transparent);
+  padding: 0 1rem;
+  background: color-mix(in srgb, var(--card-bg) 85%, transparent);
   backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.4rem;
+  border-bottom: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
 .top-control-btn {
@@ -932,12 +973,13 @@ body {
 }
 .top-control-btn-home {
   font-weight: 600;
+  margin-right: auto;
 }
 
-/* Version info button/popup kept for backward compatibility with versionInfo.js */
+/* Version info popup kept for backward compatibility with versionInfo.js */
 .version-info-btn {
   position: fixed;
-  top: 1rem;
+  top: 0.7rem;
   right: 1rem;
   z-index: 500;
   width: 32px;
@@ -981,6 +1023,73 @@ body {
   margin-bottom: 0;
 }
 
+/* Mobile folder-tree toggle button (fixes previously-broken selector that
+   hid the sidebar entirely on phones for nested persons like Gaurav/Anamika) */
+.mobile-menu-btn {
+  display: none;
+}
+
+/* Bottom Navigation (Mobile) — reserved, unused by default */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card-bg);
+  border-top: 1px solid var(--border);
+  padding: 0.75rem;
+  z-index: 50;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: inline-flex;
+    margin: 0.75rem;
+  }
+  .sidebar {
+    display: none;
+    position: fixed;
+    top: var(--topbar-h);
+    left: 0;
+    height: calc(100% - var(--topbar-h));
+    z-index: 200;
+    width: 280px;
+    box-shadow: var(--shadow-lg);
+  }
+  .sidebar.open {
+    display: block;
+  }
+  .explorer {
+    flex-direction: column;
+  }
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .person-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .documents-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .modal-body-split {
+    flex-direction: column;
+  }
+  .viewer-panel + .viewer-panel {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+  .viewer-pdf-panel iframe {
+    min-height: 50vh;
+  }
+}
+
+/* Utility: hidden */
+.hidden {
+  display: none !important;
+}
+
 /* ---------- Micro-animations ---------- */
 @keyframes fadeIn {
   from {
@@ -1003,7 +1112,7 @@ body {
 @keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(-4px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
