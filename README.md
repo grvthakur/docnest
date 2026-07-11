@@ -41,6 +41,6 @@ git push -u origin main --force
 node scan-docs.js --dry-run --verbose
 node scan-docs.js
 git add .
-git commit -m "docs: add new documents"
+git commit -m "dark mode and button fix"
 git push
 ```
