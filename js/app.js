@@ -5,7 +5,6 @@ import { LoginComponent } from "./components/login.js";
 import { DashboardComponent } from "./components/dashboard.js";
 import { ExplorerComponent } from "./components/explorer.js";
 import { ViewerComponent } from "./components/viewer.js";
-import { mountVersionInfo } from "./components/versionInfo.js";
 
 export class App {
   constructor() {
@@ -20,7 +19,9 @@ export class App {
 
   async init() {
     console.log("[DocNest] init() starting");
-    mountVersionInfo();
+    import("./components/versionInfo.js")
+      .then((mod) => mod.mountVersionInfo())
+      .catch((e) => console.error("[DocNest] version info failed to load:", e));
 
     const config = await loadConfig();
     // loadDocuments now reads config.persons[*].documentsFile and merges
