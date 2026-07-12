@@ -10,10 +10,9 @@ export class ExplorerComponent {
     this.currentFolderId = null;
     this.searchQuery = "";
     this.activeFilter = "all";
-    this.sortBy = "name"; // "name" | "date" | "type"
+    this.sortBy = "name";
     this.listView = false;
-    // Tracks which folder nodes are expanded, keyed by full folder path.
-    // Persists across re-renders/navigation for the life of this component.
+    this.filtersOpen = false; // mobile collapsible filter bar
     this.expandedFolders = new Set();
   }
 
@@ -23,7 +22,6 @@ export class ExplorerComponent {
     this.currentFolderId = folderPath ? `${personId}/${folderPath}` : personId;
     this.searchQuery = "";
     this.activeFilter = "all";
-    // Auto-expand every ancestor of the folder we're navigating into.
     if (!this.isFlat) {
       const parts = this.currentFolderId.split("/");
       let acc = parts[0];
@@ -41,7 +39,6 @@ export class ExplorerComponent {
     this.main = createElement("div", { className: "explorer-main" });
 
     if (this.isFlat) {
-      // Simplified view for Mummy/Papa: no sidebar folder tree, no breadcrumb.
       this.sidebar = null;
       this.renderFlatHeader();
     } else {
@@ -101,6 +98,18 @@ export class ExplorerComponent {
     ]);
     this.sidebar.appendChild(headerRow);
 
+    // Mobile-only close button so the folder overlay can be dismissed
+    // without hunting for a tiny X — sits right under the header.
+    const closeSidebarBtn = createElement(
+      "button",
+      {
+        className: "btn btn-outline sidebar-close-btn",
+        onClick: () => this.sidebar.classList.remove("open"),
+      },
+      ["✕ Close folders"],
+    );
+    this.sidebar.appendChild(closeSidebarBtn);
+
     const treeControls = createElement("div", { className: "tree-controls" }, [
       createElement(
         "button",
@@ -134,8 +143,6 @@ export class ExplorerComponent {
     this.sidebar.appendChild(ul);
   }
 
-  // Flattens a folder tree into a list of every node's path, used by
-  // "Expand all" to open every level in one click.
   collectAllFolderPaths(nodes) {
     const paths = [];
     for (const node of nodes) {
@@ -157,7 +164,6 @@ export class ExplorerComponent {
         "span",
         {
           className: `folder-arrow ${hasChildren ? "" : "folder-arrow-hidden"}`,
-          // Arrow only toggles expand/collapse; it never navigates.
           onClick: (e) => {
             e.stopPropagation();
             if (isExpanded) this.expandedFolders.delete(node.path);
@@ -171,12 +177,13 @@ export class ExplorerComponent {
         "div",
         {
           className: `folder-item ${isActive ? "active" : ""}`,
-          // Clicking the row (not the arrow) selects/navigates the folder.
-          onClick: () =>
+          onClick: () => {
             this.onNavigate(
               this.currentPersonId,
               node.path.split("/").slice(1).join("/"),
-            ),
+            );
+            if (this.sidebar) this.sidebar.classList.remove("open");
+          },
         },
         [
           arrow,
@@ -213,6 +220,8 @@ export class ExplorerComponent {
     const parts = this.currentFolderId.split("/");
     const folderParts = parts.slice(1);
 
+    // Always-visible, clearly-labeled back action so mobile users never get
+    // stuck inside a folder with no obvious way out.
     if (folderParts.length > 0) {
       const parentPath = folderParts.slice(0, -1).join("/");
       const backBtn = createElement(
@@ -221,7 +230,7 @@ export class ExplorerComponent {
           className: "btn btn-outline breadcrumb-back",
           onClick: () => this.onNavigate(this.currentPersonId, parentPath),
         },
-        ["← Back"],
+        ["← Back to folders"],
       );
       this.breadcrumb.appendChild(backBtn);
     }
@@ -261,7 +270,13 @@ export class ExplorerComponent {
     if (this.toolbar && this.toolbar.parentNode) {
       this.toolbar.parentNode.removeChild(this.toolbar);
     }
-    this.toolbar = createElement("div", { className: "toolbar" });
+    if (this.resultCount && this.resultCount.parentNode) {
+      this.resultCount.parentNode.removeChild(this.resultCount);
+    }
+    this.toolbar = createElement("div", {
+      className: `toolbar ${this.filtersOpen ? "filters-open" : ""}`,
+    });
+
     const search = createElement("div", { className: "search-box" }, [
       createElement("span", { className: "search-icon" }, ["🔍"]),
       createElement("input", {
@@ -275,6 +290,20 @@ export class ExplorerComponent {
         },
       }),
     ]);
+
+    // Mobile-only compact toggle to reclaim vertical space for the grid.
+    const filtersToggle = createElement(
+      "button",
+      {
+        className: "btn btn-outline filters-toggle-btn",
+        onClick: () => {
+          this.filtersOpen = !this.filtersOpen;
+          this.renderToolbar();
+        },
+      },
+      [this.filtersOpen ? "▲ Hide filters" : "▼ Filters"],
+    );
+
     const filterGroup = createElement("div", { className: "filter-group" });
     const filters = ["all", "pdf", "image", "word", "excel", "zip"];
     filters.forEach((f) => {
@@ -295,6 +324,7 @@ export class ExplorerComponent {
 
     const sortSelect = createElement("select", {
       className: "input sort-select",
+      title: "Sort documents",
       onChange: (e) => {
         this.sortBy = e.target.value;
         this.renderDocuments();
@@ -316,15 +346,19 @@ export class ExplorerComponent {
       "button",
       {
         className: "btn btn-outline view-toggle-btn",
-        title: "Toggle grid/list view",
+        title: this.listView ? "Switch to grid view" : "Switch to list view",
+        "aria-label": this.listView
+          ? "Switch to grid view"
+          : "Switch to list view",
         onClick: () => {
           this.listView = !this.listView;
           if (this.docGrid) {
             this.docGrid.classList.toggle("list-view", this.listView);
           }
+          this.renderToolbar();
         },
       },
-      [this.listView ? "⊞" : "☰"],
+      [this.listView ? "⊞ Grid" : "☰ List"],
     );
 
     const hasActiveFilters =
@@ -352,7 +386,7 @@ export class ExplorerComponent {
       clearBtn,
     ]);
 
-    this.toolbar.append(search, toolbarRight);
+    this.toolbar.append(search, filtersToggle, toolbarRight);
     this.resultCount = createElement("div", { className: "result-count" });
     if (this.docGrid && this.docGrid.parentNode === this.main) {
       this.main.insertBefore(this.toolbar, this.docGrid);
@@ -363,9 +397,6 @@ export class ExplorerComponent {
     }
   }
 
-  // A document now has multiple format variants (variants[].fileType) instead
-  // of a single fileType. These helpers check across all of a document's
-  // variants rather than a single field.
   getVariantTypes(doc) {
     return (doc.variants || []).map((v) => v.fileType?.toLowerCase());
   }
@@ -386,9 +417,6 @@ export class ExplorerComponent {
   renderDocuments() {
     emptyElement(this.docGrid);
     const isSearching = this.searchQuery.trim().length > 0;
-    // While searching, look across every document belonging to this person
-    // (regardless of which folder is currently open) instead of only the
-    // current folder's contents, so search works globally.
     let docs = isSearching
       ? this.state.getDocumentsForPerson(this.currentPersonId)
       : this.isFlat
@@ -421,15 +449,22 @@ export class ExplorerComponent {
     }
 
     if (docs.length === 0) {
+      const isFiltered =
+        this.searchQuery.trim().length > 0 || this.activeFilter !== "all";
       this.docGrid.appendChild(
-        createElement(
-          "p",
-          {
-            style:
-              "grid-column:1/-1;text-align:center;color:var(--text-light);",
-          },
-          ["No documents found."],
-        ),
+        createElement("div", { className: "empty-state" }, [
+          createElement("div", { className: "empty-state-icon" }, [
+            isFiltered ? "🔍" : "📂",
+          ]),
+          createElement("p", { className: "empty-state-title" }, [
+            isFiltered ? "No matching documents" : "This folder is empty",
+          ]),
+          createElement("p", { className: "empty-state-sub" }, [
+            isFiltered
+              ? "Try a different search term or clear filters."
+              : "No documents have been added here yet.",
+          ]),
+        ]),
       );
       return;
     }
@@ -471,7 +506,6 @@ export class ExplorerComponent {
           ])
         : null;
 
-      // Quick actions revealed on hover: preview + download first variant.
       const firstVariant = (doc.variants || [])[0];
       const actions = createElement("div", { className: "doc-actions" }, [
         createElement(
@@ -479,6 +513,7 @@ export class ExplorerComponent {
           {
             className: "doc-action-btn",
             title: "Preview",
+            "aria-label": "Preview",
             onClick: (e) => {
               e.stopPropagation();
               this.onDocumentClick(doc);
@@ -491,6 +526,7 @@ export class ExplorerComponent {
           {
             className: "doc-action-btn",
             title: "Download",
+            "aria-label": "Download",
             href: firstVariant ? firstVariant.filePath : "#",
             download: firstVariant
               ? firstVariant.filePath.split("/").pop()
@@ -525,7 +561,6 @@ export class ExplorerComponent {
     });
   }
 
-  // Returns the first image variant of a document, if any, for thumbnail use.
   getImageVariant(doc) {
     const imageTypes = ["jpg", "jpeg", "png", "webp"];
     return (doc.variants || []).find((v) =>
@@ -573,8 +608,6 @@ export class ExplorerComponent {
     return sorted;
   }
 
-  // Prefer showing a PDF icon if a PDF variant exists, otherwise the first
-  // variant's type, so mixed PDF+Photo documents get a sensible icon.
   getPrimaryType(doc) {
     const types = this.getVariantTypes(doc);
     if (types.includes("pdf")) return "pdf";
@@ -596,6 +629,7 @@ export class ExplorerComponent {
       "button",
       {
         className: "btn btn-outline mobile-menu-btn",
+        title: "Show folders",
         onClick: () => {
           this.sidebar.classList.toggle("open");
         },

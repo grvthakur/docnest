@@ -23,9 +23,9 @@ export class App {
       .then((mod) => mod.mountTopControls())
       .catch((e) => console.error("[DocNest] top controls failed to load:", e));
 
+    this.showSkeleton();
+
     const config = await loadConfig();
-    // loadDocuments now reads config.persons[*].documentsFile and merges
-    // each person's own JSON file, instead of one monolithic documents.json.
     const documents = await loadDocuments(config);
     console.log("[DocNest] config + documents loaded", config, documents);
 
@@ -42,15 +42,24 @@ export class App {
     this.handleRoute();
   }
 
+  // Lightweight shimmer placeholder shown during the initial fetch, instead
+  // of the bare "Loading DocNest..." text.
+  showSkeleton() {
+    const appEl = document.getElementById("app");
+    const grid = document.createElement("div");
+    grid.className = "skeleton-grid";
+    for (let i = 0; i < 8; i++) {
+      const card = document.createElement("div");
+      card.className = "skeleton-card";
+      grid.appendChild(card);
+    }
+    appEl.innerHTML = "";
+    appEl.appendChild(grid);
+  }
+
   handleRoute() {
-    // window.location.hash includes the leading "#", e.g. "#/login" or "#/explorer/gaurav/Resume"
-    // Strip the "#" and any leading "/" so "login" or "explorer/gaurav/Resume" remains.
     const hash = window.location.hash.replace(/^#\/?/, "") || "login";
     const [route, ...rawParams] = hash.split("/");
-    // Segments come from the URL hash and are percent-encoded (e.g. spaces
-    // become "%20"). They must be decoded before use, otherwise folderPath
-    // lookups like "Personal Docs Misc" never match the literal string
-    // "Personal%20Docs%20Misc" and the folder appears empty.
     const params = rawParams.map((p) => decodeURIComponent(p));
     console.log("[DocNest] routing to:", route, params);
 
@@ -129,9 +138,6 @@ export class App {
   }
 
   navigate(hash) {
-    // Encode each "/"-separated segment individually so folder names with
-    // spaces/special characters survive the round trip through the hash,
-    // while the "/" separators themselves stay intact.
     const encoded = hash
       .split("/")
       .map((seg) => encodeURIComponent(seg))

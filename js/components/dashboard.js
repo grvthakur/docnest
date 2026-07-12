@@ -8,19 +8,8 @@ export class DashboardComponent {
 
   render() {
     this.container = createElement("div", { className: "dashboard" });
-    const logoutBtn = createElement(
-      "button",
-      {
-        className: "btn btn-outline",
-        onClick: () => {
-          window.dispatchEvent(new CustomEvent("docnest-logout"));
-        },
-      },
-      ["Logout"],
-    );
     const header = createElement("div", { className: "dashboard-header" }, [
       createElement("h2", {}, ["Documents"]),
-      logoutBtn,
     ]);
 
     const grid = createElement("div", { className: "person-grid" });
@@ -33,13 +22,25 @@ export class DashboardComponent {
       "#7c3aed",
       "#0891b2",
     ];
-    persons.forEach((person, i) => {
-      const stats = this.state.getPersonStats(person.id);
+
+    const statsList = persons.map((p) => ({
+      person: p,
+      stats: this.state.getPersonStats(p.id),
+    }));
+    const mostRecent = statsList.reduce((latest, cur) => {
+      if (!cur.stats.lastUpdated) return latest;
+      if (!latest || cur.stats.lastUpdated > latest.stats.lastUpdated)
+        return cur;
+      return latest;
+    }, null);
+
+    statsList.forEach(({ person, stats }, i) => {
       const color = colors[i % colors.length];
+      const isRecent = mostRecent && mostRecent.person.id === person.id;
       const card = createElement(
         "div",
         {
-          className: "card person-card",
+          className: `card person-card ${isRecent ? "person-card-recent" : ""}`,
           onClick: () => this.onPersonClick(person.id),
         },
         [
@@ -73,8 +74,44 @@ export class DashboardComponent {
       );
       grid.appendChild(card);
     });
+
     this.container.appendChild(header);
     this.container.appendChild(grid);
+    this.container.appendChild(this.buildRecentActivity(statsList));
     return this.container;
+  }
+
+  // Fills the empty space below the grid with a quick summary instead of
+  // dead whitespace, and doubles as an at-a-glance "what changed" panel.
+  buildRecentActivity(statsList) {
+    const totalDocs = statsList.reduce((sum, s) => sum + s.stats.count, 0);
+    const sorted = statsList
+      .filter((s) => s.stats.lastUpdated)
+      .sort((a, b) => b.stats.lastUpdated.localeCompare(a.stats.lastUpdated));
+
+    const section = createElement("div", { className: "recent-activity" }, [
+      createElement("h3", { className: "recent-activity-title" }, [
+        "Recent activity",
+      ]),
+      createElement("div", { className: "recent-activity-summary" }, [
+        `${totalDocs} document${totalDocs === 1 ? "" : "s"} across ${statsList.length} profile${statsList.length === 1 ? "" : "s"}`,
+      ]),
+    ]);
+
+    const list = createElement("div", { className: "recent-activity-list" });
+    sorted.slice(0, 5).forEach(({ person, stats }) => {
+      list.appendChild(
+        createElement("div", { className: "recent-activity-row" }, [
+          createElement("span", { className: "recent-activity-name" }, [
+            person.name,
+          ]),
+          createElement("span", { className: "recent-activity-date" }, [
+            stats.lastUpdated,
+          ]),
+        ]),
+      );
+    });
+    if (sorted.length > 0) section.appendChild(list);
+    return section;
   }
 }

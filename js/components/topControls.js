@@ -16,7 +16,6 @@ function setTheme(theme) {
 export function mountTopControls() {
   const container = createElement("div", { className: "top-controls" });
 
-  // Home — always available, harmless no-op if already on dashboard/login
   const homeBtn = createElement(
     "button",
     {
@@ -29,7 +28,20 @@ export function mountTopControls() {
     ["🏠 ", createElement("span", {}, ["Home"])],
   );
 
-  // Theme toggle
+  // Logout — lives in the top bar now instead of the dashboard header so
+  // it's always reachable regardless of which screen is open.
+  const logoutBtn = createElement(
+    "button",
+    {
+      className: "top-control-btn",
+      title: "Logout",
+      onClick: () => {
+        window.dispatchEvent(new CustomEvent("docnest-logout"));
+      },
+    },
+    ["⎋ Logout"],
+  );
+
   const themeBtn = createElement(
     "button",
     { className: "top-control-btn", title: "Toggle theme" },
@@ -41,7 +53,6 @@ export function mountTopControls() {
     themeBtn.textContent = next === "dark" ? "☀️" : "🌙";
   });
 
-  // Info popup (unchanged behavior, now grouped instead of separately anchored)
   const infoBtn = createElement(
     "button",
     { className: "top-control-btn", title: "Version info" },
@@ -90,7 +101,9 @@ export function mountTopControls() {
         ]),
         createElement("div", { className: "version-info-row" }, [
           createElement("strong", {}, ["Deployed: "]),
-          data.deployedAt ? new Date(data.deployedAt).toLocaleString() : "N/A",
+          data.deployedAt
+            ? new Date(data.deployedAt).toLocaleString()
+            : "N/A",
         ]),
       );
     } catch (e) {
@@ -102,6 +115,6 @@ export function mountTopControls() {
     openPopup();
   });
 
-  container.append(homeBtn, infoBtn, themeBtn);
+  container.append(homeBtn, infoBtn, themeBtn, logoutBtn);
   document.body.appendChild(container);
 }
