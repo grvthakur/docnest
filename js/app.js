@@ -42,8 +42,6 @@ export class App {
     this.handleRoute();
   }
 
-  // Lightweight shimmer placeholder shown during the initial fetch, instead
-  // of the bare "Loading DocNest..." text.
   showSkeleton() {
     const appEl = document.getElementById("app");
     const grid = document.createElement("div");
@@ -100,9 +98,14 @@ export class App {
   }
 
   showDashboard() {
-    const dashboard = new DashboardComponent(this.state, (personId) => {
-      this.navigate(`explorer/${personId}`);
-    });
+    // Pass the last-opened person id so the dashboard can highlight the
+    // actually-active profile instead of any one person being hardcoded.
+    const activePersonId = this.components.explorer?.currentPersonId || null;
+    const dashboard = new DashboardComponent(
+      this.state,
+      (personId) => this.navigate(`explorer/${personId}`),
+      activePersonId,
+    );
     document.getElementById("app").appendChild(dashboard.render());
   }
 

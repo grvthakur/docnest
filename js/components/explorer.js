@@ -12,7 +12,7 @@ export class ExplorerComponent {
     this.activeFilter = "all";
     this.sortBy = "name";
     this.listView = false;
-    this.filtersOpen = false; // mobile collapsible filter bar
+    this.filtersOpen = false;
     this.expandedFolders = new Set();
   }
 
@@ -50,6 +50,8 @@ export class ExplorerComponent {
     }
 
     this.docGrid = null;
+    this.toolbar = null;
+    this.resultCount = null;
     this.renderToolbar();
     this.docGrid = createElement("div", {
       className: `documents-grid ${this.listView ? "list-view" : ""}`,
@@ -98,8 +100,6 @@ export class ExplorerComponent {
     ]);
     this.sidebar.appendChild(headerRow);
 
-    // Mobile-only close button so the folder overlay can be dismissed
-    // without hunting for a tiny X — sits right under the header.
     const closeSidebarBtn = createElement(
       "button",
       {
@@ -220,8 +220,6 @@ export class ExplorerComponent {
     const parts = this.currentFolderId.split("/");
     const folderParts = parts.slice(1);
 
-    // Always-visible, clearly-labeled back action so mobile users never get
-    // stuck inside a folder with no obvious way out.
     if (folderParts.length > 0) {
       const parentPath = folderParts.slice(0, -1).join("/");
       const backBtn = createElement(
@@ -273,6 +271,7 @@ export class ExplorerComponent {
     if (this.resultCount && this.resultCount.parentNode) {
       this.resultCount.parentNode.removeChild(this.resultCount);
     }
+
     this.toolbar = createElement("div", {
       className: `toolbar ${this.filtersOpen ? "filters-open" : ""}`,
     });
@@ -291,7 +290,6 @@ export class ExplorerComponent {
       }),
     ]);
 
-    // Mobile-only compact toggle to reclaim vertical space for the grid.
     const filtersToggle = createElement(
       "button",
       {
@@ -388,6 +386,7 @@ export class ExplorerComponent {
 
     this.toolbar.append(search, filtersToggle, toolbarRight);
     this.resultCount = createElement("div", { className: "result-count" });
+
     if (this.docGrid && this.docGrid.parentNode === this.main) {
       this.main.insertBefore(this.toolbar, this.docGrid);
       this.main.insertBefore(this.resultCount, this.docGrid);
@@ -395,6 +394,39 @@ export class ExplorerComponent {
       this.main.appendChild(this.toolbar);
       this.main.appendChild(this.resultCount);
     }
+
+    this.updateResultCount();
+  }
+
+  updateResultCount() {
+    if (!this.resultCount) return;
+    const isSearching = this.searchQuery.trim().length > 0;
+    const docs = this.getFilteredDocs();
+    this.resultCount.textContent = isSearching
+      ? `${docs.length} result${docs.length === 1 ? "" : "s"} for "${this.searchQuery.trim()}"`
+      : "";
+  }
+
+  getFilteredDocs() {
+    const isSearching = this.searchQuery.trim().length > 0;
+    let docs = isSearching
+      ? this.state.getDocumentsForPerson(this.currentPersonId)
+      : this.isFlat
+        ? this.state.getDocumentsForPerson(this.currentPersonId)
+        : this.state.getDocumentsInFolder(this.currentFolderId);
+    if (isSearching) {
+      const q = this.searchQuery.trim().toLowerCase();
+      docs = docs.filter(
+        (doc) =>
+          doc.name.toLowerCase().includes(q) ||
+          (doc.tags && doc.tags.some((t) => t.toLowerCase().includes(q))) ||
+          (doc.category && doc.category.toLowerCase().includes(q)),
+      );
+    }
+    if (this.activeFilter !== "all") {
+      docs = docs.filter((doc) => this.matchesFilter(doc, this.activeFilter));
+    }
+    return docs;
   }
 
   getVariantTypes(doc) {
@@ -416,37 +448,14 @@ export class ExplorerComponent {
 
   renderDocuments() {
     emptyElement(this.docGrid);
-    const isSearching = this.searchQuery.trim().length > 0;
-    let docs = isSearching
-      ? this.state.getDocumentsForPerson(this.currentPersonId)
-      : this.isFlat
-        ? this.state.getDocumentsForPerson(this.currentPersonId)
-        : this.state.getDocumentsInFolder(this.currentFolderId);
-    if (isSearching) {
-      const q = this.searchQuery.trim().toLowerCase();
-      docs = docs.filter(
-        (doc) =>
-          doc.name.toLowerCase().includes(q) ||
-          (doc.tags && doc.tags.some((t) => t.toLowerCase().includes(q))) ||
-          (doc.category && doc.category.toLowerCase().includes(q)),
-      );
-    }
-    if (this.activeFilter !== "all") {
-      docs = docs.filter((doc) => this.matchesFilter(doc, this.activeFilter));
-    }
-
-    docs = this.sortDocuments(docs);
+    const docs = this.sortDocuments(this.getFilteredDocs());
 
     if (this.clearBtn) {
       const hasActiveFilters =
         this.searchQuery.trim().length > 0 || this.activeFilter !== "all";
       this.clearBtn.style.visibility = hasActiveFilters ? "visible" : "hidden";
     }
-    if (this.resultCount) {
-      this.resultCount.textContent = isSearching
-        ? `${docs.length} result${docs.length === 1 ? "" : "s"} for "${this.searchQuery.trim()}"`
-        : "";
-    }
+    this.updateResultCount();
 
     if (docs.length === 0) {
       const isFiltered =

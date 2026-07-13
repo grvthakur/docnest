@@ -1,9 +1,10 @@
 import { createElement } from "../utils/dom.js";
 
 export class DashboardComponent {
-  constructor(state, onPersonClick) {
+  constructor(state, onPersonClick, activePersonId = null) {
     this.state = state;
     this.onPersonClick = onPersonClick;
+    this.activePersonId = activePersonId;
   }
 
   render() {
@@ -37,10 +38,11 @@ export class DashboardComponent {
     statsList.forEach(({ person, stats }, i) => {
       const color = colors[i % colors.length];
       const isRecent = mostRecent && mostRecent.person.id === person.id;
+      const isActive = this.activePersonId === person.id;
       const card = createElement(
         "div",
         {
-          className: `card person-card ${isRecent ? "person-card-recent" : ""}`,
+          className: `card person-card ${isRecent ? "person-card-recent" : ""} ${isActive ? "person-card-active" : ""}`,
           onClick: () => this.onPersonClick(person.id),
         },
         [
@@ -81,8 +83,6 @@ export class DashboardComponent {
     return this.container;
   }
 
-  // Fills the empty space below the grid with a quick summary instead of
-  // dead whitespace, and doubles as an at-a-glance "what changed" panel.
   buildRecentActivity(statsList) {
     const totalDocs = statsList.reduce((sum, s) => sum + s.stats.count, 0);
     const sorted = statsList

@@ -28,8 +28,6 @@ export function mountTopControls() {
     ["🏠 ", createElement("span", {}, ["Home"])],
   );
 
-  // Logout — lives in the top bar now instead of the dashboard header so
-  // it's always reachable regardless of which screen is open.
   const logoutBtn = createElement(
     "button",
     {
@@ -101,9 +99,7 @@ export function mountTopControls() {
         ]),
         createElement("div", { className: "version-info-row" }, [
           createElement("strong", {}, ["Deployed: "]),
-          data.deployedAt
-            ? new Date(data.deployedAt).toLocaleString()
-            : "N/A",
+          data.deployedAt ? new Date(data.deployedAt).toLocaleString() : "N/A",
         ]),
       );
     } catch (e) {
