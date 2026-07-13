@@ -381,5 +381,45 @@
         "filePath": "files/mummy/MUMMY PASSBOOK.jpg"
       }
     ]
+  },
+  {
+    "id": "auto-1783917736680-620-mummy",
+    "name": "Chhotu Id Card",
+    "person": "mummy",
+    "category": "Documents",
+    "folderPath": "mummy",
+    "tags": [
+      "documents",
+      "mummy"
+    ],
+    "lastUpdated": "2026-07-13",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpeg",
+        "filePath": "files/mummy/CHHOTU ID CARD.jpeg",
+        "fileSize": 136224
+      }
+    ]
+  },
+  {
+    "id": "auto-1783917736681-158-mummy",
+    "name": "Gas Card Mahinam",
+    "person": "mummy",
+    "category": "Documents",
+    "folderPath": "mummy",
+    "tags": [
+      "documents",
+      "mummy"
+    ],
+    "lastUpdated": "2026-07-13",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "heic",
+        "filePath": "files/mummy/GAS CARD MAHINAM.HEIC",
+        "fileSize": 1386035
+      }
+    ]
   }
 ]

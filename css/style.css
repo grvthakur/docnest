@@ -17,6 +17,7 @@
     Arial, sans-serif;
   --transition: 0.2s ease;
   --topbar-h: 56px;
+  --grid-gap: 1.25rem;
 }
 
 [data-theme="dark"] {
@@ -42,6 +43,10 @@
 body {
   font-family: var(--font);
   background: var(--bg-grad);
+  background-image:
+    var(--bg-grad),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/></svg>");
+  background-attachment: fixed;
   color: var(--text);
   min-height: 100vh;
   display: flex;
@@ -206,7 +211,7 @@ body {
 .person-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
+  gap: var(--grid-gap);
 }
 .person-card {
   cursor: pointer;
@@ -218,7 +223,9 @@ body {
   border-radius: var(--radius);
   box-shadow:
     var(--shadow),
-    0 0 0 2px var(--primary);
+    0 0 0 2px var(--card-color, var(--primary)),
+    0 0 16px
+      color-mix(in srgb, var(--card-color, var(--primary)) 35%, transparent);
   transition:
     transform var(--transition),
     box-shadow var(--transition);
@@ -246,8 +253,9 @@ body {
   transform: translateY(-6px) scale(1.03);
   box-shadow:
     var(--shadow-lg),
-    0 0 0 2px var(--primary),
-    0 0 24px rgba(99, 102, 241, 0.25);
+    0 0 0 2px var(--card-color, var(--primary)),
+    0 0 26px
+      color-mix(in srgb, var(--card-color, var(--primary)) 50%, transparent);
 }
 /* Most-recently-updated profile gets a brighter glow on top of the
    default ring every card already has */
@@ -450,11 +458,14 @@ body {
 }
 .folder-count {
   font-size: 0.7rem;
-  color: var(--text-light);
-  background: var(--bg);
-  border-radius: 10px;
-  padding: 0.05rem 0.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-light);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
   flex-shrink: 0;
+  min-width: 1.4em;
+  text-align: center;
 }
 .folder-item.active .folder-count {
   background: #fff;
@@ -597,8 +608,8 @@ body {
 .documents-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+  gap: var(--grid-gap);
+  padding: var(--grid-gap);
   overflow-y: auto;
   flex: 1;
   min-height: 0;

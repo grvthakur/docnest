@@ -43,6 +43,7 @@ export class DashboardComponent {
         "div",
         {
           className: `card person-card ${isRecent ? "person-card-recent" : ""} ${isActive ? "person-card-active" : ""}`,
+          style: `--card-color:${color};`,
           onClick: () => this.onPersonClick(person.id),
         },
         [
