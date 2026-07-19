@@ -64,7 +64,9 @@ export class ViewerComponent {
       ),
     ]);
 
-    const body = createElement("div", { className: "modal-body modal-body-split" });
+    const body = createElement("div", {
+      className: "modal-body modal-body-split",
+    });
 
     if (images.length > 0 && pdf) {
       // Split view: images side-by-side on the left, PDF on the right.
@@ -120,12 +122,21 @@ export class ViewerComponent {
   }
 
   buildImagesPanel(images) {
-    const panel = createElement("div", { className: "viewer-panel viewer-images-panel" });
+    const panel = createElement("div", {
+      className: "viewer-panel viewer-images-panel",
+    });
     const grid = createElement("div", { className: "viewer-images-grid" });
     for (const variant of images) {
+      const img = createElement("img", {
+        src: variant.filePath,
+        alt: variant.label,
+      });
+      this.enableZoomPan(img);
       const tile = createElement("div", { className: "viewer-image-tile" }, [
-        createElement("img", { src: variant.filePath, alt: variant.label }),
-        createElement("div", { className: "viewer-image-label" }, [variant.label]),
+        img,
+        createElement("div", { className: "viewer-image-label" }, [
+          variant.label,
+        ]),
       ]);
       grid.appendChild(tile);
     }
@@ -133,8 +144,94 @@ export class ViewerComponent {
     return panel;
   }
 
+  // Lightweight pinch-zoom + pan + double-tap/click-to-zoom on an <img>.
+  // No external libs; just CSS transform + pointer events.
+  enableZoomPan(img) {
+    let scale = 1,
+      panX = 0,
+      panY = 0;
+    let lastDist = null,
+      lastTap = 0;
+    const pointers = new Map();
+    img.style.transformOrigin = "center center";
+    img.style.transition = "transform 0.15s ease";
+    img.style.touchAction = "none";
+    img.style.cursor = "zoom-in";
+
+    const apply = () => {
+      img.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
+      img.style.cursor = scale > 1 ? "grab" : "zoom-in";
+    };
+    const reset = () => {
+      scale = 1;
+      panX = 0;
+      panY = 0;
+      apply();
+    };
+
+    img.addEventListener("pointerdown", (e) => {
+      pointers.set(e.pointerId, e);
+      img.setPointerCapture(e.pointerId);
+    });
+    img.addEventListener("pointermove", (e) => {
+      if (!pointers.has(e.pointerId)) return;
+      const prev = pointers.get(e.pointerId);
+      pointers.set(e.pointerId, e);
+      if (pointers.size === 2) {
+        const [p1, p2] = [...pointers.values()];
+        const dist = Math.hypot(
+          p1.clientX - p2.clientX,
+          p1.clientY - p2.clientY,
+        );
+        if (lastDist != null) {
+          scale = Math.min(4, Math.max(0.25, scale * (dist / lastDist)));
+          apply();
+        }
+        lastDist = dist;
+      } else if (pointers.size === 1 && scale > 1) {
+        panX += e.clientX - prev.clientX;
+        panY += e.clientY - prev.clientY;
+        apply();
+      }
+    });
+    const endPointer = (e) => {
+      pointers.delete(e.pointerId);
+      if (pointers.size < 2) lastDist = null;
+    };
+    img.addEventListener("pointerup", endPointer);
+    img.addEventListener("pointercancel", endPointer);
+    img.addEventListener("pointerleave", endPointer);
+
+    img.addEventListener("click", () => {
+      const now = Date.now();
+      if (now - lastTap < 300) {
+        if (scale > 1) reset();
+        else {
+          scale = 2;
+          apply();
+        }
+      }
+      lastTap = now;
+    });
+    img.addEventListener(
+      "wheel",
+      (e) => {
+        e.preventDefault();
+        scale = Math.min(4, Math.max(0.25, scale - e.deltaY * 0.002));
+        if (scale <= 1) {
+          panX = 0;
+          panY = 0;
+        }
+        apply();
+      },
+      { passive: false },
+    );
+  }
+
   buildPdfPanel(pdfVariant) {
-    const panel = createElement("div", { className: "viewer-panel viewer-pdf-panel" });
+    const panel = createElement("div", {
+      className: "viewer-panel viewer-pdf-panel",
+    });
     panel.appendChild(
       createElement("iframe", {
         src: pdfVariant.filePath + "#view=FitH",
@@ -150,25 +247,31 @@ export class ViewerComponent {
       type === "heic"
         ? "HEIC photos can't be previewed in the browser."
         : "Preview not available.";
-    return createElement("div", { className: "viewer-panel viewer-panel-full" }, [
-      createElement("p", { style: "text-align:center;" }, [
-        message + " ",
-        createElement(
-          "a",
-          {
-            href: variant.filePath,
-            download: this.buildDownloadName(variant),
-            className: "btn",
-          },
-          ["Download"],
-        ),
-      ]),
-    ]);
+    return createElement(
+      "div",
+      { className: "viewer-panel viewer-panel-full" },
+      [
+        createElement("p", { style: "text-align:center;" }, [
+          message + " ",
+          createElement(
+            "a",
+            {
+              href: variant.filePath,
+              download: this.buildDownloadName(variant),
+              className: "btn",
+            },
+            ["Download"],
+          ),
+        ]),
+      ],
+    );
   }
 
   buildOthersBar(others) {
     const bar = createElement("div", { className: "viewer-others-bar" }, [
-      createElement("span", { className: "viewer-others-label" }, ["Also available:"]),
+      createElement("span", { className: "viewer-others-label" }, [
+        "Also available:",
+      ]),
     ]);
     for (const variant of others) {
       bar.appendChild(
@@ -189,7 +292,9 @@ export class ViewerComponent {
   // One download link per variant, so front/back/PDF can each be saved
   // individually instead of forcing a single "active" choice.
   buildDownloadFooter(variants) {
-    const footer = createElement("div", { className: "modal-footer modal-footer-list" });
+    const footer = createElement("div", {
+      className: "modal-footer modal-footer-list",
+    });
     for (const variant of variants) {
       footer.appendChild(
         createElement(
