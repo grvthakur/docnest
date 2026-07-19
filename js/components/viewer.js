@@ -126,12 +126,13 @@ export class ViewerComponent {
       className: "viewer-panel viewer-images-panel",
     });
     const grid = createElement("div", { className: "viewer-images-grid" });
+    const resetFns = [];
     for (const variant of images) {
       const img = createElement("img", {
         src: variant.filePath,
         alt: variant.label,
       });
-      this.enableZoomPan(img);
+      resetFns.push(this.enableZoomPan(img));
       const tile = createElement("div", { className: "viewer-image-tile" }, [
         img,
         createElement("div", { className: "viewer-image-label" }, [
@@ -140,6 +141,13 @@ export class ViewerComponent {
       ]);
       grid.appendChild(tile);
     }
+    const resetAll = () => resetFns.forEach((fn) => fn());
+    // Tapping/clicking the panel background (not an image) snaps zoom back to 1x.
+    panel.addEventListener("click", (e) => {
+      if (e.target === panel || e.target === grid) resetAll();
+    });
+    // Scrolling the panel (e.g. swiping past the image on mobile) also resets.
+    panel.addEventListener("scroll", resetAll, { passive: true });
     panel.appendChild(grid);
     return panel;
   }
@@ -226,6 +234,8 @@ export class ViewerComponent {
       },
       { passive: false },
     );
+
+    return reset;
   }
 
   buildPdfPanel(pdfVariant) {
