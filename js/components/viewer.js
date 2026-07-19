@@ -26,6 +26,7 @@ export class ViewerComponent {
       this._imageResetCleanup();
       this._imageResetCleanup = null;
     }
+    this._imageResetAll = null;
   }
 
   // Split the document's variants into images (front/back/etc.), the PDF (if
@@ -121,6 +122,13 @@ export class ViewerComponent {
     modal.appendChild(body);
     if (otherBar) modal.appendChild(otherBar);
     modal.appendChild(footer);
+    // Clicking anywhere in the modal that isn't the zoomed image itself
+    // (header, title, background, footer) snaps zoom back to 1x.
+    if (this._imageResetAll) {
+      modal.addEventListener("click", (e) => {
+        if (e.target.tagName !== "IMG") this._imageResetAll();
+      });
+    }
     this.modal.appendChild(modal);
     document.body.appendChild(this.modal);
   }
@@ -146,10 +154,7 @@ export class ViewerComponent {
       grid.appendChild(tile);
     }
     const resetAll = () => resetFns.forEach((fn) => fn());
-    // Tapping/clicking anywhere that isn't an image itself snaps zoom back to 1x.
-    panel.addEventListener("click", (e) => {
-      if (e.target.tagName !== "IMG") resetAll();
-    });
+    this._imageResetAll = resetAll;
     // Scrolling resets too. The real scroll container is often an ancestor
     // (e.g. .modal-body-split on mobile) rather than this panel, and scroll
     // events don't bubble — so listen in the capture phase on document,
@@ -264,11 +269,33 @@ export class ViewerComponent {
     const panel = createElement("div", {
       className: "viewer-panel viewer-pdf-panel",
     });
+    const absoluteUrl = new URL(pdfVariant.filePath, window.location.href).href;
+    // Android Chrome's built-in PDF plugin frequently fails to render inside
+    // an <iframe> (shows blank + just an "Open" prompt). Google's viewer
+    // renders PDFs reliably inside an iframe on mobile, so use it there.
+    const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+    const src = isMobile
+      ? `https://docs.google.com/viewer?embedded=true&url=${encodeURIComponent(absoluteUrl)}`
+      : pdfVariant.filePath + "#view=FitH";
     panel.appendChild(
       createElement("iframe", {
-        src: pdfVariant.filePath + "#view=FitH",
+        src,
         title: pdfVariant.label || "PDF Preview",
       }),
+    );
+    // Always-visible fallback in case the embedded viewer still fails.
+    panel.appendChild(
+      createElement(
+        "a",
+        {
+          href: absoluteUrl,
+          target: "_blank",
+          rel: "noopener",
+          className: "btn btn-outline",
+          style: "margin-top:0.5rem;",
+        },
+        ["Open PDF"],
+      ),
     );
     return panel;
   }
@@ -279,24 +306,17 @@ export class ViewerComponent {
       type === "heic"
         ? "HEIC photos can't be previewed in the browser."
         : "Preview not available.";
-    return createElement(
-      "div",
-      { className: "viewer-panel viewer-panel-full" },
-      [
-        createElement("p", { style: "text-align:center;" }, [
-          message + " ",
-          createElement(
-            "a",
-            {
-              href: variant.filePath,
-              download: this.buildDownloadName(variant),
-              className: "btn",
-            },
-            ["Download"],
-          ),
-        ]),
-      ],
-    );
+    const panel = createElement("div", {
+      className: "viewer-panel viewer-panel-full",
+    });
+    const p = createElement("p", { style: "text-align:center;" }, [
+      message + " ",
+    ]);
+    const btn = createElement("button", { className: "btn" }, ["Download"]);
+    btn.addEventListener("click", () => this.triggerDownload(variant, btn));
+    p.appendChild(btn);
+    panel.appendChild(p);
+    return panel;
   }
 
   buildOthersBar(others) {
@@ -306,17 +326,11 @@ export class ViewerComponent {
       ]),
     ]);
     for (const variant of others) {
-      bar.appendChild(
-        createElement(
-          "a",
-          {
-            href: variant.filePath,
-            download: this.buildDownloadName(variant),
-            className: "btn btn-outline",
-          },
-          [`⬇ ${variant.label}`],
-        ),
-      );
+      const btn = createElement("button", { className: "btn btn-outline" }, [
+        `⬇ ${variant.label}`,
+      ]);
+      btn.addEventListener("click", () => this.triggerDownload(variant, btn));
+      bar.appendChild(btn);
     }
     return bar;
   }
@@ -328,17 +342,11 @@ export class ViewerComponent {
       className: "modal-footer modal-footer-list",
     });
     for (const variant of variants) {
-      footer.appendChild(
-        createElement(
-          "a",
-          {
-            href: variant.filePath,
-            download: this.buildDownloadName(variant),
-            className: "btn btn-outline",
-          },
-          [`⬇ ${variant.label}`],
-        ),
-      );
+      const btn = createElement("button", { className: "btn btn-outline" }, [
+        `⬇ ${variant.label}`,
+      ]);
+      btn.addEventListener("click", () => this.triggerDownload(variant, btn));
+      footer.appendChild(btn);
     }
     return footer;
   }
@@ -346,6 +354,42 @@ export class ViewerComponent {
   buildDownloadName(variant) {
     const parts = variant.filePath.split("/");
     return parts[parts.length - 1];
+  }
+
+  // Downloads via fetch+blob instead of a plain <a download> navigation.
+  // iOS Safari (and standalone/home-screen PWA mode especially) often
+  // ignores the download attribute and navigates away instead — in PWA
+  // mode that kicks the user out to Safari with no way back. Blob download
+  // never navigates, so it works the same in a browser tab or installed app.
+  async triggerDownload(variant, btn) {
+    const original = btn.textContent;
+    btn.textContent = "Downloading…";
+    try {
+      const resp = await fetch(variant.filePath);
+      const blob = await resp.blob();
+      const filename = this.buildDownloadName(variant);
+      const file = new File([blob], filename, { type: blob.type });
+      // iOS Safari often just previews images/PDFs instead of downloading
+      // them via the `download` attribute. The Web Share API triggers the
+      // native "Save to Files" / "Save Image" sheet instead, which is the
+      // reliable way to save on iOS (works in browser tab and installed PWA).
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file] });
+      } else {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 2000);
+      }
+    } catch (e) {
+      if (e.name !== "AbortError") window.open(variant.filePath, "_blank");
+    } finally {
+      btn.textContent = original;
+    }
   }
 
   navigate(direction) {

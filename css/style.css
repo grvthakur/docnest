@@ -1015,6 +1015,7 @@ body {
 }
 .viewer-pdf-panel {
   padding: 0;
+  flex-direction: column;
 }
 .viewer-pdf-panel iframe {
   width: 100%;
