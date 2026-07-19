@@ -257,8 +257,6 @@ body {
     0 0 26px
       color-mix(in srgb, var(--card-color, var(--primary)) 50%, transparent);
 }
-/* Most-recently-updated profile gets a brighter glow on top of the
-   default ring every card already has */
 .person-card-recent {
   box-shadow:
     var(--shadow),
@@ -1175,12 +1173,31 @@ body {
     order: 4;
     width: 100%;
   }
+
+  /* Viewer modal — mobile fix:
+     Previously both .modal-body-split AND .viewer-panel had overflow:auto,
+     creating two nested scrollers that fought each other so swiping got
+     stuck and the second image (e.g. Photo Back) was unreachable. Now only
+     the outer body scrolls, images stack one per row, and each is capped
+     so both front/back stay reachable without excess scrolling. */
   .modal-body-split {
     flex-direction: column;
+    overflow-y: auto;
+    align-items: stretch;
+  }
+  .viewer-panel {
+    overflow: visible;
+    flex: 0 0 auto;
   }
   .viewer-panel + .viewer-panel {
     border-left: none;
     border-top: 1px solid var(--border);
+  }
+  .viewer-images-grid {
+    grid-template-columns: 1fr;
+  }
+  .viewer-image-tile img {
+    max-height: 45vh;
   }
   .viewer-pdf-panel iframe {
     min-height: 50vh;
