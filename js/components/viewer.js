@@ -22,6 +22,10 @@ export class ViewerComponent {
       this.modal.remove();
       this.modal = null;
     }
+    if (this._imageResetCleanup) {
+      this._imageResetCleanup();
+      this._imageResetCleanup = null;
+    }
   }
 
   // Split the document's variants into images (front/back/etc.), the PDF (if
@@ -142,18 +146,28 @@ export class ViewerComponent {
       grid.appendChild(tile);
     }
     const resetAll = () => resetFns.forEach((fn) => fn());
-    // Tapping/clicking the panel background (not an image) snaps zoom back to 1x.
+    // Tapping/clicking anywhere that isn't an image itself snaps zoom back to 1x.
     panel.addEventListener("click", (e) => {
-      if (e.target === panel || e.target === grid) resetAll();
+      if (e.target.tagName !== "IMG") resetAll();
     });
-    // Scrolling the panel (e.g. swiping past the image on mobile) also resets.
-    panel.addEventListener("scroll", resetAll, { passive: true });
+    // Scrolling resets too. The real scroll container is often an ancestor
+    // (e.g. .modal-body-split on mobile) rather than this panel, and scroll
+    // events don't bubble — so listen in the capture phase on document,
+    // which does catch scroll from any scrollable descendant.
+    document.addEventListener("scroll", resetAll, {
+      passive: true,
+      capture: true,
+    });
+    this._imageResetCleanup = () =>
+      document.removeEventListener("scroll", resetAll, { capture: true });
     panel.appendChild(grid);
     return panel;
   }
 
   // Lightweight pinch-zoom + pan + double-tap/click-to-zoom on an <img>.
-  // No external libs; just CSS transform + pointer events.
+  // No external libs; just CSS transform + pointer events. Live gestures
+  // (pinch/drag/wheel) apply instantly with no transition to avoid glitchy
+  // lag; only the double-tap and reset snaps use a brief eased transition.
   enableZoomPan(img) {
     let scale = 1,
       panX = 0,
@@ -162,7 +176,7 @@ export class ViewerComponent {
       lastTap = 0;
     const pointers = new Map();
     img.style.transformOrigin = "center center";
-    img.style.transition = "transform 0.15s ease";
+    img.style.transition = "none";
     img.style.touchAction = "none";
     img.style.cursor = "zoom-in";
 
@@ -170,11 +184,18 @@ export class ViewerComponent {
       img.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
       img.style.cursor = scale > 1 ? "grab" : "zoom-in";
     };
+    const applyAnimated = () => {
+      img.style.transition = "transform 0.2s ease";
+      apply();
+      setTimeout(() => {
+        img.style.transition = "none";
+      }, 200);
+    };
     const reset = () => {
       scale = 1;
       panX = 0;
       panY = 0;
-      apply();
+      applyAnimated();
     };
 
     img.addEventListener("pointerdown", (e) => {
@@ -210,13 +231,14 @@ export class ViewerComponent {
     img.addEventListener("pointercancel", endPointer);
     img.addEventListener("pointerleave", endPointer);
 
-    img.addEventListener("click", () => {
+    img.addEventListener("click", (e) => {
+      e.stopPropagation();
       const now = Date.now();
       if (now - lastTap < 300) {
         if (scale > 1) reset();
         else {
           scale = 2;
-          apply();
+          applyAnimated();
         }
       }
       lastTap = now;
