@@ -3245,5 +3245,65 @@
         "filePath": "files/gaurav/Resume/GRV_RESUME_DATABASE.pdf"
       }
     ]
+  },
+  {
+    "id": "auto-1784482845744-725-gaurav",
+    "name": "Application Number",
+    "person": "gaurav",
+    "category": "Bike",
+    "folderPath": "gaurav/Bike",
+    "tags": [
+      "bike",
+      "gaurav"
+    ],
+    "lastUpdated": "2026-07-19",
+    "variants": [
+      {
+        "label": "Text",
+        "fileType": "txt",
+        "filePath": "files/gaurav/Bike/APPLICATION NUMBER.txt",
+        "fileSize": 101
+      }
+    ]
+  },
+  {
+    "id": "auto-1784482845744-153-gaurav",
+    "name": "Dl Atm Aadhar",
+    "person": "gaurav",
+    "category": "Bike",
+    "folderPath": "gaurav/Bike",
+    "tags": [
+      "bike",
+      "gaurav"
+    ],
+    "lastUpdated": "2026-07-19",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "png",
+        "filePath": "files/gaurav/Bike/DL_ATM_AADHAR.png",
+        "fileSize": 2665584
+      }
+    ]
+  },
+  {
+    "id": "auto-1784482845744-210-gaurav",
+    "name": "Vehiclehistory",
+    "person": "gaurav",
+    "category": "Bike",
+    "folderPath": "gaurav/Bike",
+    "tags": [
+      "bike",
+      "gaurav"
+    ],
+    "lastUpdated": "2026-07-19",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Bike/VehicleHistory.pdf",
+        "fileSize": 132834
+      }
+    ]
   }
 ]

@@ -497,5 +497,85 @@
         "filePath": "files/papa/PAPA_PASSPORT_PHOTO.jpg"
       }
     ]
+  },
+  {
+    "id": "auto-1784482845730-607-papa",
+    "name": "Gas Card Mahinam",
+    "person": "papa",
+    "category": "Documents",
+    "folderPath": "papa",
+    "tags": [
+      "documents",
+      "papa"
+    ],
+    "lastUpdated": "2026-07-19",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "heic",
+        "filePath": "files/papa/GAS CARD MAHINAM.HEIC",
+        "fileSize": 1386035
+      }
+    ]
+  },
+  {
+    "id": "auto-1784482845731-312-papa",
+    "name": "Papa Bike Reg Card",
+    "person": "papa",
+    "category": "Documents",
+    "folderPath": "papa",
+    "tags": [
+      "documents",
+      "papa"
+    ],
+    "lastUpdated": "2026-07-19",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA BIKE REG CARD .pdf",
+        "fileSize": 1756302
+      }
+    ]
+  },
+  {
+    "id": "auto-1784482845731-294-papa",
+    "name": "Papa Pan",
+    "person": "papa",
+    "category": "Documents",
+    "folderPath": "papa",
+    "tags": [
+      "documents",
+      "papa"
+    ],
+    "lastUpdated": "2026-07-19",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/papa/PAPA PAN .pdf",
+        "fileSize": 1122702
+      }
+    ]
+  },
+  {
+    "id": "auto-1784482845731-460-papa",
+    "name": "Rashan Card",
+    "person": "papa",
+    "category": "Documents",
+    "folderPath": "papa",
+    "tags": [
+      "documents",
+      "papa"
+    ],
+    "lastUpdated": "2026-07-19",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "heic",
+        "filePath": "files/papa/RASHAN CARD.HEIC",
+        "fileSize": 1280971
+      }
+    ]
   }
 ]
