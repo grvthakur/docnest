@@ -3351,5 +3351,25 @@
         "fileSize": 2186403
       }
     ]
+  },
+  {
+    "id": "auto-1784525982661-620-gaurav",
+    "name": "Eaadhaar",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs",
+      "gaurav"
+    ],
+    "lastUpdated": "2026-07-20",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/Personal Docs/EAadhaar.pdf",
+        "fileSize": 1367670
+      }
+    ]
   }
 ]
