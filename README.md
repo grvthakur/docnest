@@ -32,6 +32,7 @@ node backfill-filesize.js             # apply
 git status                  # see what changed
 git add .
 git commit -m "eye button on all"
+git pull --rebase origin main
 git push
 git push -u origin main --force
 ```

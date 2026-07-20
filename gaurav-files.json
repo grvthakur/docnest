@@ -3305,5 +3305,51 @@
         "fileSize": 132834
       }
     ]
+  },
+  {
+    "id": "auto-1784525044139-285-gaurav",
+    "name": "Aadhar Pvc",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs",
+      "gaurav"
+    ],
+    "lastUpdated": "2026-07-20",
+    "variants": [
+      {
+        "label": "Photo (Back)",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Personal Docs/AADHAR PVC BACK.jpg",
+        "fileSize": 1842907
+      },
+      {
+        "label": "Photo (Front)",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/Personal Docs/AADHAR PVC FRONT.jpg",
+        "fileSize": 1302944
+      }
+    ]
+  },
+  {
+    "id": "auto-1784525044139-377-gaurav",
+    "name": "College Id Card",
+    "person": "gaurav",
+    "category": "Personal Docs",
+    "folderPath": "gaurav/Personal Docs",
+    "tags": [
+      "personal docs",
+      "gaurav"
+    ],
+    "lastUpdated": "2026-07-20",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "png",
+        "filePath": "files/gaurav/Personal Docs/COLLEGE ID CARD.png",
+        "fileSize": 2186403
+      }
+    ]
   }
 ]
