@@ -3371,5 +3371,65 @@
         "fileSize": 1367670
       }
     ]
+  },
+  {
+    "id": "auto-1784618662253-756-gaurav",
+    "name": "Notes",
+    "person": "gaurav",
+    "category": "Others",
+    "folderPath": "gaurav/Others",
+    "tags": [
+      "others",
+      "gaurav"
+    ],
+    "lastUpdated": "2026-07-21",
+    "variants": [
+      {
+        "label": "Excel",
+        "fileType": "xlsx",
+        "filePath": "files/gaurav/Others/NOTES.xlsx",
+        "fileSize": 1004925
+      }
+    ]
+  },
+  {
+    "id": "auto-1784618662253-155-gaurav",
+    "name": "240def80 F793 4a2c 9f26 14655fbb09f5",
+    "person": "gaurav",
+    "category": "PF related",
+    "folderPath": "gaurav/PF related",
+    "tags": [
+      "pf related",
+      "gaurav"
+    ],
+    "lastUpdated": "2026-07-21",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/PF related/240def80-f793-4a2c-9f26-14655fbb09f5.pdf",
+        "fileSize": 75079
+      }
+    ]
+  },
+  {
+    "id": "auto-1784618662254-869-gaurav",
+    "name": "9a58a3e1 15a1 442b 867e 0eb105b1e2ff",
+    "person": "gaurav",
+    "category": "PF related",
+    "folderPath": "gaurav/PF related",
+    "tags": [
+      "pf related",
+      "gaurav"
+    ],
+    "lastUpdated": "2026-07-21",
+    "variants": [
+      {
+        "label": "PDF",
+        "fileType": "pdf",
+        "filePath": "files/gaurav/PF related/9a58a3e1-15a1-442b-867e-0eb105b1e2ff.pdf",
+        "fileSize": 60016
+      }
+    ]
   }
 ]
