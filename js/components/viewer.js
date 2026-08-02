@@ -270,11 +270,34 @@ export class ViewerComponent {
       className: "viewer-panel viewer-pdf-panel",
     });
     const absoluteUrl = new URL(pdfVariant.filePath, window.location.href).href;
+    const ua = navigator.userAgent;
+    const isIOS = /iPhone|iPad|iPod/i.test(ua);
+    const isAndroid = /Android/i.test(ua);
+
+    if (isIOS) {
+      // iOS Safari's in-iframe PDF viewer can trap the user with no close
+      // button. Skip the iframe entirely and link out instead — opens in a
+      // normal Safari tab with native back/close controls.
+      panel.appendChild(
+        createElement(
+          "a",
+          {
+            href: absoluteUrl,
+            target: "_blank",
+            rel: "noopener",
+            className: "btn",
+            style: "margin:auto;",
+          },
+          ["📄 Open PDF"],
+        ),
+      );
+      return panel;
+    }
+
     // Android Chrome's built-in PDF plugin frequently fails to render inside
     // an <iframe> (shows blank + just an "Open" prompt). Google's viewer
     // renders PDFs reliably inside an iframe on mobile, so use it there.
-    const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
-    const src = isMobile
+    const src = isAndroid
       ? `https://docs.google.com/viewer?embedded=true&url=${encodeURIComponent(absoluteUrl)}`
       : pdfVariant.filePath + "#view=FitH";
     panel.appendChild(

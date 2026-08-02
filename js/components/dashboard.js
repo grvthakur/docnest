@@ -1,5 +1,12 @@
 import { createElement } from "../utils/dom.js";
 
+const PHOTOS = {
+  gaurav: "GRV.jpg",
+  mummy: "MUMMY.jpg",
+  anamika: "ANAMIKA.jpeg",
+  papa: "PAPA.jpg",
+};
+
 export class DashboardComponent {
   constructor(state, onPersonClick, activePersonId = null) {
     this.state = state;
@@ -60,7 +67,19 @@ export class DashboardComponent {
                   className: "avatar",
                   style: `background:${color}22;color:${color};`,
                 },
-                [person.name.charAt(0)],
+                [
+                  createElement("img", {
+                    src: `files/${person.id}/${PHOTOS[person.id] || ""}`,
+                    loading: "lazy",
+                    style:
+                      "width:100%;height:100%;object-fit:cover;border-radius:50%;",
+                    onError: (e) => {
+                      e.target.replaceWith(
+                        document.createTextNode(person.name.charAt(0)),
+                      );
+                    },
+                  }),
+                ],
               ),
             ],
           ),
