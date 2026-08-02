@@ -577,5 +577,25 @@
         "fileSize": 1280971
       }
     ]
+  },
+  {
+    "id": "auto-1785686264673-667-papa",
+    "name": "Papa",
+    "person": "papa",
+    "category": "Documents",
+    "folderPath": "papa",
+    "tags": [
+      "documents",
+      "papa"
+    ],
+    "lastUpdated": "2026-08-02",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/papa/PAPA.jpg",
+        "fileSize": 1299596
+      }
+    ]
   }
 ]

@@ -421,5 +421,25 @@
         "fileSize": 1386035
       }
     ]
+  },
+  {
+    "id": "auto-1785686264656-134-mummy",
+    "name": "Mummy",
+    "person": "mummy",
+    "category": "Documents",
+    "folderPath": "mummy",
+    "tags": [
+      "documents",
+      "mummy"
+    ],
+    "lastUpdated": "2026-08-02",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "heic",
+        "filePath": "files/mummy/MUMMY.heic",
+        "fileSize": 2644797
+      }
+    ]
   }
 ]
