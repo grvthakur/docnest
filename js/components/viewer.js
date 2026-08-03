@@ -13,6 +13,50 @@ function isIOS() {
   );
 }
 
+// On iOS the `download` attribute on <a> tags is ignored — the browser
+// navigates to the file instead of prompting a save/share sheet.
+// Fetching the file as a blob then creating a local object URL forces
+// the share sheet to appear instead.
+async function iosDownload(filePath, fileName) {
+  try {
+    const res = await fetch(filePath);
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = fileName;
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
+      URL.revokeObjectURL(url);
+      a.remove();
+    }, 2000);
+  } catch (e) {
+    // Fallback: open in new tab if fetch fails (e.g. cross-origin)
+    window.open(filePath, "_blank", "noopener,noreferrer");
+  }
+}
+
+// Build a download element — on iOS uses blob trick, elsewhere uses <a download>
+function makeDownloadLink(filePath, fileName, label, className) {
+  if (isIOS()) {
+    const btn = document.createElement("button");
+    btn.className = className || "btn btn-outline";
+    btn.textContent = label;
+    btn.addEventListener("click", () => iosDownload(filePath, fileName));
+    return btn;
+  }
+  const a = document.createElement("a");
+  a.href = filePath;
+  a.download = fileName;
+  a.target = "_blank";
+  a.rel = "noopener noreferrer";
+  a.className = className || "btn btn-outline";
+  a.textContent = label;
+  return a;
+}
+
 export class ViewerComponent {
   constructor() {
     this.currentDoc = null;
@@ -150,15 +194,43 @@ export class ViewerComponent {
     return panel;
   }
 
-  // On iOS, <iframe src="*.pdf"> doesn't render — the page just stays blank.
-  // Show an "Open PDF" button (new tab) instead of a broken iframe there;
-  // everywhere else keep the inline iframe preview.
+  // On iOS, <iframe src="*.pdf"> doesn't render inline in the main modal.
+  // Show an "Open PDF" button that opens a fullscreen in-app overlay
+  // with a ✕ close button — no navigation away from the app.
   buildPdfPanel(pdfVariant) {
     const panel = createElement("div", {
       className: "viewer-panel viewer-pdf-panel",
     });
 
     if (isIOS()) {
+      const openOverlay = () => {
+        const overlay = createElement("div", {
+          className: "modal-overlay",
+          style: "z-index:3000;display:flex;flex-direction:column;",
+        });
+        const closeBtn = createElement(
+          "button",
+          {
+            className: "btn btn-outline",
+            style:
+              "position:fixed;top:0.75rem;right:0.75rem;z-index:3100;background:var(--bg);",
+            onClick: () => overlay.remove(),
+          },
+          ["✕ Close"],
+        );
+        const iframe = createElement("iframe", {
+          src: pdfVariant.filePath,
+          style: "flex:1;width:100%;border:none;margin-top:3rem;",
+          title: pdfVariant.label || "PDF Preview",
+        });
+        overlay.appendChild(closeBtn);
+        overlay.appendChild(iframe);
+        overlay.addEventListener("click", (e) => {
+          if (e.target === overlay) overlay.remove();
+        });
+        document.body.appendChild(overlay);
+      };
+
       panel.appendChild(
         createElement(
           "div",
@@ -170,16 +242,11 @@ export class ViewerComponent {
             createElement(
               "p",
               { style: "margin-bottom:1rem;color:var(--text-light);" },
-              ["PDF preview isn't supported in this browser."],
+              ["Tap below to preview the PDF."],
             ),
             createElement(
-              "a",
-              {
-                href: pdfVariant.filePath,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                className: "btn",
-              },
+              "button",
+              { className: "btn", onClick: openOverlay },
               ["📄 Open PDF"],
             ),
           ],
@@ -209,16 +276,11 @@ export class ViewerComponent {
       [
         createElement("p", { style: "text-align:center;" }, [
           message + " ",
-          createElement(
-            "a",
-            {
-              href: variant.filePath,
-              download: this.buildDownloadName(variant),
-              target: "_blank",
-              rel: "noopener noreferrer",
-              className: "btn",
-            },
-            ["Download"],
+          makeDownloadLink(
+            variant.filePath,
+            this.buildDownloadName(variant),
+            "Download",
+            "btn",
           ),
         ]),
       ],
@@ -233,16 +295,11 @@ export class ViewerComponent {
     ]);
     for (const variant of others) {
       bar.appendChild(
-        createElement(
-          "a",
-          {
-            href: variant.filePath,
-            download: this.buildDownloadName(variant),
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "btn btn-outline",
-          },
-          [`⬇ ${variant.label}`],
+        makeDownloadLink(
+          variant.filePath,
+          this.buildDownloadName(variant),
+          `⬇ ${variant.label}`,
+          "btn btn-outline",
         ),
       );
     }
@@ -260,16 +317,11 @@ export class ViewerComponent {
     });
     for (const variant of variants) {
       footer.appendChild(
-        createElement(
-          "a",
-          {
-            href: variant.filePath,
-            download: this.buildDownloadName(variant),
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "btn btn-outline",
-          },
-          [`⬇ ${variant.label}`],
+        makeDownloadLink(
+          variant.filePath,
+          this.buildDownloadName(variant),
+          `⬇ ${variant.label}`,
+          "btn btn-outline",
         ),
       );
     }
