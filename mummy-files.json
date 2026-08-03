@@ -441,5 +441,25 @@
         "fileSize": 2644797
       }
     ]
+  },
+  {
+    "id": "auto-1785738442586-836-mummy",
+    "name": "Mummy",
+    "person": "mummy",
+    "category": "Documents",
+    "folderPath": "mummy",
+    "tags": [
+      "documents",
+      "mummy"
+    ],
+    "lastUpdated": "2026-08-03",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/mummy/MUMMY.jpg",
+        "fileSize": 115569
+      }
+    ]
   }
 ]

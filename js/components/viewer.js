@@ -2,6 +2,17 @@ import { createElement } from "../utils/dom.js";
 
 const IMAGE_TYPES = ["jpg", "jpeg", "png", "webp"];
 
+// iOS Safari (and iPadOS, which reports as "MacIntel" with touch support)
+// cannot render PDFs inside an <iframe> reliably, and ignores the
+// `download` attribute on <a> tags — it just navigates the current tab to
+// the file instead, leaving no way back except closing the whole app.
+function isIOS() {
+  return (
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+  );
+}
+
 export class ViewerComponent {
   constructor() {
     this.currentDoc = null;
@@ -22,11 +33,6 @@ export class ViewerComponent {
       this.modal.remove();
       this.modal = null;
     }
-    if (this._imageResetCleanup) {
-      this._imageResetCleanup();
-      this._imageResetCleanup = null;
-    }
-    this._imageResetAll = null;
   }
 
   // Split the document's variants into images (front/back/etc.), the PDF (if
@@ -122,13 +128,6 @@ export class ViewerComponent {
     modal.appendChild(body);
     if (otherBar) modal.appendChild(otherBar);
     modal.appendChild(footer);
-    // Clicking anywhere in the modal that isn't the zoomed image itself
-    // (header, title, background, footer) snaps zoom back to 1x.
-    if (this._imageResetAll) {
-      modal.addEventListener("click", (e) => {
-        if (e.target.tagName !== "IMG") this._imageResetAll();
-      });
-    }
     this.modal.appendChild(modal);
     document.body.appendChild(this.modal);
   }
@@ -138,187 +137,62 @@ export class ViewerComponent {
       className: "viewer-panel viewer-images-panel",
     });
     const grid = createElement("div", { className: "viewer-images-grid" });
-    const resetFns = [];
     for (const variant of images) {
-      const img = createElement("img", {
-        src: variant.filePath,
-        alt: variant.label,
-      });
-      resetFns.push(this.enableZoomPan(img));
       const tile = createElement("div", { className: "viewer-image-tile" }, [
-        img,
+        createElement("img", { src: variant.filePath, alt: variant.label }),
         createElement("div", { className: "viewer-image-label" }, [
           variant.label,
         ]),
       ]);
       grid.appendChild(tile);
     }
-    const resetAll = () => resetFns.forEach((fn) => fn());
-    this._imageResetAll = resetAll;
-    // Scrolling resets too. The real scroll container is often an ancestor
-    // (e.g. .modal-body-split on mobile) rather than this panel, and scroll
-    // events don't bubble — so listen in the capture phase on document,
-    // which does catch scroll from any scrollable descendant.
-    document.addEventListener("scroll", resetAll, {
-      passive: true,
-      capture: true,
-    });
-    this._imageResetCleanup = () =>
-      document.removeEventListener("scroll", resetAll, { capture: true });
     panel.appendChild(grid);
     return panel;
   }
 
-  // Lightweight pinch-zoom + pan + double-tap/click-to-zoom on an <img>.
-  // No external libs; just CSS transform + pointer events. Live gestures
-  // (pinch/drag/wheel) apply instantly with no transition to avoid glitchy
-  // lag; only the double-tap and reset snaps use a brief eased transition.
-  enableZoomPan(img) {
-    let scale = 1,
-      panX = 0,
-      panY = 0;
-    let lastDist = null,
-      lastTap = 0;
-    const pointers = new Map();
-    img.style.transformOrigin = "center center";
-    img.style.transition = "none";
-    img.style.touchAction = "none";
-    img.style.cursor = "zoom-in";
-
-    const apply = () => {
-      img.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
-      img.style.cursor = scale > 1 ? "grab" : "zoom-in";
-    };
-    const applyAnimated = () => {
-      img.style.transition = "transform 0.2s ease";
-      apply();
-      setTimeout(() => {
-        img.style.transition = "none";
-      }, 200);
-    };
-    const reset = () => {
-      scale = 1;
-      panX = 0;
-      panY = 0;
-      applyAnimated();
-    };
-
-    img.addEventListener("pointerdown", (e) => {
-      pointers.set(e.pointerId, e);
-      img.setPointerCapture(e.pointerId);
-    });
-    img.addEventListener("pointermove", (e) => {
-      if (!pointers.has(e.pointerId)) return;
-      const prev = pointers.get(e.pointerId);
-      pointers.set(e.pointerId, e);
-      if (pointers.size === 2) {
-        const [p1, p2] = [...pointers.values()];
-        const dist = Math.hypot(
-          p1.clientX - p2.clientX,
-          p1.clientY - p2.clientY,
-        );
-        if (lastDist != null) {
-          scale = Math.min(4, Math.max(0.25, scale * (dist / lastDist)));
-          apply();
-        }
-        lastDist = dist;
-      } else if (pointers.size === 1 && scale > 1) {
-        panX += e.clientX - prev.clientX;
-        panY += e.clientY - prev.clientY;
-        apply();
-      }
-    });
-    const endPointer = (e) => {
-      pointers.delete(e.pointerId);
-      if (pointers.size < 2) lastDist = null;
-    };
-    img.addEventListener("pointerup", endPointer);
-    img.addEventListener("pointercancel", endPointer);
-    img.addEventListener("pointerleave", endPointer);
-
-    img.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const now = Date.now();
-      if (now - lastTap < 300) {
-        if (scale > 1) reset();
-        else {
-          scale = 2;
-          applyAnimated();
-        }
-      }
-      lastTap = now;
-    });
-    img.addEventListener(
-      "wheel",
-      (e) => {
-        e.preventDefault();
-        scale = Math.min(4, Math.max(0.25, scale - e.deltaY * 0.002));
-        if (scale <= 1) {
-          panX = 0;
-          panY = 0;
-        }
-        apply();
-      },
-      { passive: false },
-    );
-
-    return reset;
-  }
-
+  // On iOS, <iframe src="*.pdf"> doesn't render — the page just stays blank.
+  // Show an "Open PDF" button (new tab) instead of a broken iframe there;
+  // everywhere else keep the inline iframe preview.
   buildPdfPanel(pdfVariant) {
     const panel = createElement("div", {
       className: "viewer-panel viewer-pdf-panel",
     });
-    const absoluteUrl = new URL(pdfVariant.filePath, window.location.href).href;
-    const ua = navigator.userAgent;
-    const isIOS = /iPhone|iPad|iPod/i.test(ua);
-    const isAndroid = /Android/i.test(ua);
 
-    if (isIOS) {
-      // iOS Safari's in-iframe PDF viewer can trap the user with no close
-      // button. Skip the iframe entirely and link out instead — opens in a
-      // normal Safari tab with native back/close controls.
+    if (isIOS()) {
       panel.appendChild(
         createElement(
-          "a",
+          "div",
           {
-            href: absoluteUrl,
-            target: "_blank",
-            rel: "noopener",
-            className: "btn",
-            style: "margin:auto;",
+            className: "viewer-pdf-fallback",
+            style: "text-align:center;padding:2rem;",
           },
-          ["📄 Open PDF"],
+          [
+            createElement(
+              "p",
+              { style: "margin-bottom:1rem;color:var(--text-light);" },
+              ["PDF preview isn't supported in this browser."],
+            ),
+            createElement(
+              "a",
+              {
+                href: pdfVariant.filePath,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "btn",
+              },
+              ["📄 Open PDF"],
+            ),
+          ],
         ),
       );
       return panel;
     }
 
-    // Android Chrome's built-in PDF plugin frequently fails to render inside
-    // an <iframe> (shows blank + just an "Open" prompt). Google's viewer
-    // renders PDFs reliably inside an iframe on mobile, so use it there.
-    const src = isAndroid
-      ? `https://docs.google.com/viewer?embedded=true&url=${encodeURIComponent(absoluteUrl)}`
-      : pdfVariant.filePath + "#view=FitH";
     panel.appendChild(
       createElement("iframe", {
-        src,
+        src: pdfVariant.filePath + "#view=FitH",
         title: pdfVariant.label || "PDF Preview",
       }),
-    );
-    // Always-visible fallback in case the embedded viewer still fails.
-    panel.appendChild(
-      createElement(
-        "a",
-        {
-          href: absoluteUrl,
-          target: "_blank",
-          rel: "noopener",
-          className: "btn btn-outline",
-          style: "margin-top:0.5rem;",
-        },
-        ["Open PDF"],
-      ),
     );
     return panel;
   }
@@ -329,17 +203,26 @@ export class ViewerComponent {
       type === "heic"
         ? "HEIC photos can't be previewed in the browser."
         : "Preview not available.";
-    const panel = createElement("div", {
-      className: "viewer-panel viewer-panel-full",
-    });
-    const p = createElement("p", { style: "text-align:center;" }, [
-      message + " ",
-    ]);
-    const btn = createElement("button", { className: "btn" }, ["Download"]);
-    btn.addEventListener("click", () => this.triggerDownload(variant, btn));
-    p.appendChild(btn);
-    panel.appendChild(p);
-    return panel;
+    return createElement(
+      "div",
+      { className: "viewer-panel viewer-panel-full" },
+      [
+        createElement("p", { style: "text-align:center;" }, [
+          message + " ",
+          createElement(
+            "a",
+            {
+              href: variant.filePath,
+              download: this.buildDownloadName(variant),
+              target: "_blank",
+              rel: "noopener noreferrer",
+              className: "btn",
+            },
+            ["Download"],
+          ),
+        ]),
+      ],
+    );
   }
 
   buildOthersBar(others) {
@@ -349,27 +232,46 @@ export class ViewerComponent {
       ]),
     ]);
     for (const variant of others) {
-      const btn = createElement("button", { className: "btn btn-outline" }, [
-        `⬇ ${variant.label}`,
-      ]);
-      btn.addEventListener("click", () => this.triggerDownload(variant, btn));
-      bar.appendChild(btn);
+      bar.appendChild(
+        createElement(
+          "a",
+          {
+            href: variant.filePath,
+            download: this.buildDownloadName(variant),
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "btn btn-outline",
+          },
+          [`⬇ ${variant.label}`],
+        ),
+      );
     }
     return bar;
   }
 
   // One download link per variant, so front/back/PDF can each be saved
   // individually instead of forcing a single "active" choice.
+  // Every link opens in a new tab (target="_blank") so it never becomes part
+  // of the SPA's hash history — otherwise the browser's back button can
+  // unwind straight past the viewer to the dashboard/homepage.
   buildDownloadFooter(variants) {
     const footer = createElement("div", {
       className: "modal-footer modal-footer-list",
     });
     for (const variant of variants) {
-      const btn = createElement("button", { className: "btn btn-outline" }, [
-        `⬇ ${variant.label}`,
-      ]);
-      btn.addEventListener("click", () => this.triggerDownload(variant, btn));
-      footer.appendChild(btn);
+      footer.appendChild(
+        createElement(
+          "a",
+          {
+            href: variant.filePath,
+            download: this.buildDownloadName(variant),
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "btn btn-outline",
+          },
+          [`⬇ ${variant.label}`],
+        ),
+      );
     }
     return footer;
   }
@@ -377,42 +279,6 @@ export class ViewerComponent {
   buildDownloadName(variant) {
     const parts = variant.filePath.split("/");
     return parts[parts.length - 1];
-  }
-
-  // Downloads via fetch+blob instead of a plain <a download> navigation.
-  // iOS Safari (and standalone/home-screen PWA mode especially) often
-  // ignores the download attribute and navigates away instead — in PWA
-  // mode that kicks the user out to Safari with no way back. Blob download
-  // never navigates, so it works the same in a browser tab or installed app.
-  async triggerDownload(variant, btn) {
-    const original = btn.textContent;
-    btn.textContent = "Downloading…";
-    try {
-      const resp = await fetch(variant.filePath);
-      const blob = await resp.blob();
-      const filename = this.buildDownloadName(variant);
-      const file = new File([blob], filename, { type: blob.type });
-      // iOS Safari often just previews images/PDFs instead of downloading
-      // them via the `download` attribute. The Web Share API triggers the
-      // native "Save to Files" / "Save Image" sheet instead, which is the
-      // reliable way to save on iOS (works in browser tab and installed PWA).
-      if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({ files: [file] });
-      } else {
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        setTimeout(() => URL.revokeObjectURL(url), 2000);
-      }
-    } catch (e) {
-      if (e.name !== "AbortError") window.open(variant.filePath, "_blank");
-    } finally {
-      btn.textContent = original;
-    }
   }
 
   navigate(direction) {

@@ -3451,5 +3451,25 @@
         "fileSize": 1778796
       }
     ]
+  },
+  {
+    "id": "auto-1785738442621-987-gaurav",
+    "name": "Grv",
+    "person": "gaurav",
+    "category": "Documents",
+    "folderPath": "gaurav",
+    "tags": [
+      "documents",
+      "gaurav"
+    ],
+    "lastUpdated": "2026-08-03",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpg",
+        "filePath": "files/gaurav/GRV.jpg",
+        "fileSize": 158663
+      }
+    ]
   }
 ]

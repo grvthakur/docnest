@@ -609,7 +609,7 @@
   },
   {
     "id": "32-anamika",
-    "name": "Meg \u2013 10",
+    "name": "Meg – 10",
     "person": "anamika",
     "category": "Assignment Final Year",
     "folderPath": "anamika/Study/Ignou/Assignment Final Year",
@@ -621,18 +621,18 @@
       {
         "label": "Word",
         "fileType": "docx",
-        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG \u2013 10.docx"
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG – 10.docx"
       },
       {
         "label": "PDF",
         "fileType": "pdf",
-        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG \u2013 10.pdf"
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG – 10.pdf"
       }
     ]
   },
   {
     "id": "33-anamika",
-    "name": "Meg \u2013 15",
+    "name": "Meg – 15",
     "person": "anamika",
     "category": "Assignment Final Year",
     "folderPath": "anamika/Study/Ignou/Assignment Final Year",
@@ -644,12 +644,12 @@
       {
         "label": "Word",
         "fileType": "docx",
-        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG \u2013 15.docx"
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG – 15.docx"
       },
       {
         "label": "PDF",
         "fileType": "pdf",
-        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG \u2013 15.pdf"
+        "filePath": "files/anamika/STUDY/IGNOU/ASSIGNMENT FINAL YEAR/MEG – 15.pdf"
       }
     ]
   },
@@ -967,6 +967,26 @@
         "label": "PDF",
         "fileType": "pdf",
         "filePath": "files/anamika/STUDY/PDF/MATRICULATION/MARKSHEET.pdf"
+      }
+    ]
+  },
+  {
+    "id": "auto-1785738442635-800-anamika",
+    "name": "Anamika",
+    "person": "anamika",
+    "category": "Documents",
+    "folderPath": "anamika",
+    "tags": [
+      "documents",
+      "anamika"
+    ],
+    "lastUpdated": "2026-08-03",
+    "variants": [
+      {
+        "label": "Photo",
+        "fileType": "jpeg",
+        "filePath": "files/anamika/ANAMIKA.jpeg",
+        "fileSize": 176320
       }
     ]
   }
