@@ -1,5 +1,5 @@
 {
-  "commitMessage": "Revert \"fix ios pdf\"\n",
-  "commitHash": "bd8a230",
-  "deployedAt": "2026-08-03T07:32:05Z"
+  "commitMessage": "Fix iOS: PDF overlay with close button, download triggers share sheet\n",
+  "commitHash": "2b7ef75",
+  "deployedAt": "2026-08-03T07:49:48Z"
 }
