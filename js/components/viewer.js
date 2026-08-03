@@ -2,17 +2,6 @@ import { createElement } from "../utils/dom.js";
 
 const IMAGE_TYPES = ["jpg", "jpeg", "png", "webp"];
 
-// iOS Safari (and iPadOS, which reports as "MacIntel" with touch support)
-// cannot render PDFs inside an <iframe> reliably, and ignores the
-// `download` attribute on <a> tags — it just navigates the current tab to
-// the file instead, leaving no way back except closing the whole app.
-function isIOS() {
-  return (
-    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
-  );
-}
-
 export class ViewerComponent {
   constructor() {
     this.currentDoc = null;
@@ -150,47 +139,22 @@ export class ViewerComponent {
     return panel;
   }
 
-  // On iOS, <iframe src="*.pdf"> doesn't render — the page just stays blank.
-  // Show an "Open PDF" button (new tab) instead of a broken iframe there;
-  // everywhere else keep the inline iframe preview.
+  // Use <embed type="application/pdf"> rather than <iframe src="*.pdf">.
+  // iOS WebKit (Safari and especially the WKWebView used for "Add to Home
+  // Screen" apps) frequently fails to render PDFs inside an <iframe> — the
+  // panel just stays blank. <embed> is rendered by WebKit's native PDF
+  // engine directly and works reliably there. Because the PDF now displays
+  // right inside this same panel (instead of navigating to a new tab), the
+  // viewer's existing header ✕ button is all that's ever needed to close it
+  // — no separate "Open PDF" step, and nothing ever leaves the app.
   buildPdfPanel(pdfVariant) {
     const panel = createElement("div", {
       className: "viewer-panel viewer-pdf-panel",
     });
-
-    if (isIOS()) {
-      panel.appendChild(
-        createElement(
-          "div",
-          {
-            className: "viewer-pdf-fallback",
-            style: "text-align:center;padding:2rem;",
-          },
-          [
-            createElement(
-              "p",
-              { style: "margin-bottom:1rem;color:var(--text-light);" },
-              ["PDF preview isn't supported in this browser."],
-            ),
-            createElement(
-              "a",
-              {
-                href: pdfVariant.filePath,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                className: "btn",
-              },
-              ["📄 Open PDF"],
-            ),
-          ],
-        ),
-      );
-      return panel;
-    }
-
     panel.appendChild(
-      createElement("iframe", {
+      createElement("embed", {
         src: pdfVariant.filePath + "#view=FitH",
+        type: "application/pdf",
         title: pdfVariant.label || "PDF Preview",
       }),
     );
